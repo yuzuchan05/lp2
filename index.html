@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- リセットCSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- Smart Tab -->
     <link href="https://cdn.jsdelivr.net/npm/jquery-smarttab@4/dist/css/smart_tab_all.min.css" rel="stylesheet">
     <link href="/assets/style/main.css" rel="stylesheet">
@@ -32,238 +34,125 @@
 </head>
 
 <body>
-<!------------- header ----------------->
-
-    <header class="header container">
-        <div class="contents__width flex">
-            <h1 class="logo">
-                <a href="/"><img src="/assets/image/logo.svg" alt="Kira-Kira Juku"></a>
-            </h1>
-            <nav class="nav flex pc-nav">
-                <ul class="flex">
-                    <li><a href="#reason">選ばれる3つの理由</a></li>
-                    <li><a href="#course">コース・目的</a></li>
-                    <li><a href="#cost">費 用</a></li>
-                </ul>
-                <a class="btn nav__btn" href="#">入学説明会に申し込む</a>
-            </nav>
-            <div class="no-pc hamburger__icon">
-                <i class="fas fa-bars"></i>
-            </div>
-        </div>
-        <div class="contents__width">
-            <div class="nav hamburger__nav">
-                <ul>
-                    <li><i class="bi bi-arrow-right"></i><a href="#reason">選ばれる3つの理由</a></li>
-                    <li><i class="bi bi-arrow-right"></i><a href="#course">コース・目的</a></li>
-                    <li><i class="bi bi-arrow-right"></i><a href="#cost">費用</a></li>
-                </ul>
-                <a class="btn nav__btn hamburger__btn" href="/entry">入学説明会に申し込む</a>
-            </div>
-        </div>
-    </header>
-
     <main>
 
     <!------------- top ----------------->
 
         <section class="top">
-            <div class="top__item-container">
-                <div class="top__item">
-                    <img class="item__img" src="/assets/image/frame_left.png" alt="">
+            <div class="top__container">
+                <img class="top__logo" src="/assets/image/header_logo.svg" alt="Kirameki">
+                <div class="top__title">
+                    <h1>Kirameki Cream</h1>
+                    <p>肌のうるおい、煌めく。</p>
                 </div>
-                <div class="item__award">
-                    <p>難関大学の合格実績</p>
-                    <span class="award">No.<span class="large">1</span></span>
-                </div>
-                <div class="top__item">
-                    <img class="item__img" src="/assets/image/frame_right.png" alt="">
-                </div>
-            </div>
-            <div class="top__title">
-                <p class="title-begin">現役高校生・高卒生</p>
-                <p class="title-main"><span>入学説明会の</span><span>お申し込み開始</span></p>
             </div>
         </section>
 
     <!------------- btn ----------------->
-        <div class="three-btn">
-            <div class="btn__content">
-                <ul class="btn-form flex">
-                    <li><a href="/inquiry" class="btn btn-form01">入学のお問い合わせ</a></li>
-                    <li><a href="/freetrial" class="btn btn-form02">無料体験に申し込む</a></li>
-                    <li><a href="/request" class="btn btn-form03">資料請求する</a></li>
+        <div class="btn__contents">
+            <div class="btn__item">
+                <h1>キラメキクリーム</h1>
+                <p>税込  4,000円</p>
+                <ul class="btn__form">
+                    <li><a href="#" class="btn btn__form01">オンラインショップへ</a></li>
+                    <li><a href="#" class="btn btn__form02">購入する</a></li>
                 </ul>
             </div>
         </div>
 
-    <!------------- reason ----------------->
+    <!------------- mask ----------------->
 
-        <section class="reason" id="reason">
-            <div class="contents__width">
-                <div class="reason__container">
-                    <h1 class="reason__title">選ばれる<span class="large">3</span>つの理由</h1>
-                </div>
-                <div class="reason__content">
-                    <div class="reason__img">
-                        <img class="reason-pic" src="/assets/image/pht_reason_01.jpg" alt="">
-                    </div>
-                    <div class="reason__body">
-                        <div class="reason__body--point">Point<span class="reason__body--large"> 1</span></div>
-                        <div class="reason__catch">実績のある講師陣だから安心</div>
-                        <p class="reason__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    </div>
-                </div>
-                <div class="reason__content reason__content--reverse">
-                    <div class="reason__img reason__img02">
-                        <img class="reason-pic reason-pic02" src="/assets/image/pht_reason_02.png" alt="">
-                    </div>
-                    <div class="reason__body reason__body-second">
-                        <div class="reason__body--point">Point<span class="reason__body--large"> 2</span></div>
-                        <div class="reason__catch">オンラインにも対応だから、早送り巻き戻し視聴できる。</div>
-                        <p class="reason__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    </div>
-                </div>
-                <div class="reason__content">
-                    <div class="reason__img reason__img03">
-                      <img class="reason-pic reason-pic03" src="/assets/image/pht_reason_03.png" alt="">
-                    </div>
-                    <div class="reason__body">
-                        <div class="reason__body--point">Point<span class="reason__body--large"> 3</span></div>
-                        <div class="reason__catch">徹底した個別指導で、弱点を残さずそれぞれに合わせた大学受験対策。</div>
-                        <p class="reason__text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                    </div>
-                </div>
+        <section class="mask">
+            <div class="mask__container">
+                <h1>Keep Your Skin Beautiful.</h1>
+                <h2>お肌を美しく保つ</h2>
+                <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
             </div>
         </section>
 
-    <!------------- contact ----------------->
+    <!------------- voice ----------------->
 
-        <section class="contact">
-            <div class="contents__width">
-                <div class="container contact__catch">入学ご検討の方は、まずは入学説明会に<br class="no-pc">お越しください</div>
-                <a class="btn nav__btn contact__btn" href="#">入学説明会に申し込む</a>
-            </div>
-        </section>
-
-    <!------------- course ----------------->
-
-        <section class="course" id="course">
-            <div class="contents__width">
-                <div class="course__container">
-                    <h1 class="course__title">コース・目的</h1>
-                </div>
-                <div class="tab" id="smarttab">
-                    <ul class="nav">
-                        <li><a class="nav-link" href="#tab-1">学年別から選ぶ</a></li>
-                        <li><a class="nav-link" href="#tab-2">目的別から選ぶ</a></li>
-                    </ul>
-                    <div class="tab-content">
-                        <!--- タブ1 --->
-                        <div class="tab-pane flex" id="tab-1" role="tabpanel">
-                            <div class="tab__content-item">
-                                <a href="#" class="tab-item__img"><img src="/assets/image/pht_cource_01.png" alt=""></a>
-                                <a href="#" class="tab__content-title"><i class="bi bi-arrow-right"></i>高卒生</a>
-                            </div>
-                            <div class="tab__content-item tab__content-item02">
-                                <a href="#" class="tab-item__img"><img src="/assets/image/pht_cource_02.png" alt=""></a>
-                                <a href="#" class="tab__content-title"><i class="bi bi-arrow-right"></i>高校3年生</a>
-                            </div>
-                            <div class="tab__content-item">
-                                <a href="#" class="tab-item__img"><img src="/assets/image/pht_cource_03.png" alt=""></a>
-                                <a href="#" class="tab__content-title"><i class="bi bi-arrow-right"></i>高校2年生</a>
-                            </div>
-                            <div class="tab__content-item">
-                                <a href="#" class="tab-item__img tab__content-item04"><img src="/assets/image/pht_cource_04.png" alt=""></a>
-                                <a href="#" class="tab__content-title"><i class="bi bi-arrow-right"></i>高校1年生</a>
-                            </div>
+        <section class="voice">
+            <h1 class="voice__title">Voices</h1>
+            <h2 class="voice__title--jp">お客様の声</h2>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="swiper__img"><img src="assets/image/ppl_01.png" alt=""></div>
+                            <div class="swiper__ppl">Aさん</div>
+                            <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                         </div>
-                        <!--- タブ2 --->
-                        <div class="tab-pane flex" id="tab-2" role="tabpanel">
-                            <div class="tab__content-item">
-                                <a href="#" class="tab-item__img"><img src="/assets/image/pht_cource_05.png" alt=""></a>
-                                <a href="#" class="tab__content-title"><i class="bi bi-arrow-right"></i>難関大学・医学部合格を目指す</a>
-                            </div>
-                            <div class="tab__content-item">
-                                <a href="#" class="tab-item__img"><img src="/assets/image/pht_cource_06.png" alt=""></a>
-                                <a href="#" class="tab__content-title"><i class="bi bi-arrow-right"></i>名門私立大学合格を目指す</a>
-                            </div>
-                            <div class="tab__content-item">
-                                <a href="#" class="tab-item__img"><img src="/assets/image/pht_cource_07.png" alt=""></a>
-                                <a href="#" class="tab__content-title"><i class="bi bi-arrow-right"></i>国公立大学合格を目指す</a>
-                            </div>
-                            <div class="tab__content-item">
-                                <a href="#" class="tab-item__img"><img src="/assets/image/pht_cource_08.png" alt=""></a>
-                                <a href="#" class="tab__content-title"><i class="bi bi-arrow-right"></i>海外の大学合格を目指す</a>
-                            </div>
+                        <div class="swiper-slide">
+                          <div class="swiper__img"><img src="assets/image/ppl_02.png" alt=""></div>
+                          <div class="swiper__ppl">Bさん</div>
+                          <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper__img"><img src="assets/image/ppl_03.png" alt=""></div>
+                          <div class="swiper__ppl">Cさん</div>
+                          <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper__img"><img src="assets/image/ppl_04.png" alt=""></div>
+                          <div class="swiper__ppl">Dさん</div>
+                          <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper__img"><img src="assets/image/ppl_05.png" alt=""></div>
+                          <div class="swiper__ppl">Eさん</div>
+                          <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="swiper__img"><img src="assets/image/ppl_06.png" alt=""></div>
+                          <div class="swiper__ppl">Fさん</div>
+                          <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-            </div>
         </section>
 
-    <!------------- contact ----------------->
-        <section class="contact contact02">
-          <div class="contents__width">
-            <div class="container contact__catch">入学ご検討の方は、まずは入学説明会に<br class="no-pc">お越しください</div>
-            <a class="btn nav__btn contact__btn" href="#">入学説明会に申し込む</a>
-          </div>
-        </section>
+    <!------------- questions ----------------->
 
-    <!------------- cost ----------------->
+    <section class="qu">
+        <h1 class="qu__title">Q&A</h1>
+        <h2 class="qu__title--jp">よくあるご質問</h2>
+        <dl>
+            <dt>テキストが入ります。テキストが入ります。テキストが入ります。</dt>
+            <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
+        </dl>
+        <dl>
+          <dt>テキストが入ります。テキストが入ります。テキストが入ります。</dt>
+          <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
+        </dl>
+        <dl>
+            <dt>テキストが入ります。テキストが入ります。テキストが入ります。</dt>
+            <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
+        </dl>
+        <dl>
+            <dt>テキストが入ります。テキストが入ります。テキストが入ります。</dt>
+            <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
+        </dl>
+        <dl>
+            <dt>テキストが入ります。テキストが入ります。テキストが入ります。</dt>
+            <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
+        </dl>
+    </section>
 
-        <section class="cost" id="cost">
-            <div class="contents__width">
-                <div class="cost__container">
-                    <h1 class="cost__title">費 用</h1>
-                </div>
-                <div class="cost__content">
-                    <table class="cost__course">
-                        <thead>
-                            <tr>
-                                <th class="cost--time">年間講数</th>
-                                <th class="table__cost">年間授業料（税込み）</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="table__body--time">5講</td>
-                                <td class="tabl__body--cost">24,500<span class="small">円</span></td>
-                            </tr>
-                            <tr>
-                                <td class="table__body--time  table__body--time02">10講</td>
-                                <td class="tabl__body--cost tabl__body--cost02">49,000<span class="small">円</span></td>
-                            </tr>
-                            <tr>
-                                <td class="table__body--time table__body--time03">11講</td>
-                                <td class="tabl__body--cost tabl__body--cost03">53,900<span class="small">円</span></td>
-                            </tr>
-                            <tr>
-                                <td class="table__body--time table__body--time03">12講</td>
-                                <td class="tabl__body--cost tabl__body--cost04">58,800<span class="small">円</span></td>
-                            </tr>
-                            <tr>
-                                <td class="table__body--time table__body--time03">22講</td>
-                                <td class="tabl__body--cost tabl__body--cost05">107,800<span class="small">円</span></td>
-                            </tr>
-                            <tr>
-                                <td class="table__body--time table__body--time03">24講</td>
-                                <td class="tabl__body--cost06">117,600<span class="small">円</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
+    <!------------- btn ----------------->
+    <div class="btn__contents">
+        <div class="btn__item">
+            <h1>キラメキクリーム</h1>
+            <p>税込  4,000円</p>
+            <ul class="btn__form">
+                <li><a href="#" class="btn btn__form01">オンラインショップへ</a></li>
+                <li><a href="#" class="btn btn__form02">購入する</a></li>
+            </ul>
+        </div>
+    </div>
 
-    <!------------- contact ----------------->
-
-        <section class="contact contact03">
-            <div class="contents__width">
-                <div class="container contact__catch">入学ご検討の方は、まずは入学説明会に<br class="no-pc">お越しください</div>
-                <a class="btn nav__btn contact__btn" href="#">入学説明会に申し込む</a>
-            </div>
-        </section>
 
     </main>
 
@@ -271,28 +160,16 @@
 
     <footer class="footer">
         <div class="footer__container">
-            <div class="footer__top">
-                <div class="footer__left">
-                    <a href="/faq">
-                        <picture>
-                            <source srcset="/assets/image/pht_qa.jpg" media="(min-width: 768px)">
-                            <img class="footer__left-image" src="/assets/image/footer_01.jpg" alt="">
-                        </picture>
-                        <div class="footer__text">よくあるご質問</div>
-                    </a>
-                </div>
-                <div class="footer__right">
-                    <a href="/search">
-                        <picture>
-                            <source srcset="/assets/image/pht_classrooms.jpg" media="(min-width: 768px)">
-                            <img class=" footer__right-image" src="/assets/image/footer_02.jpg" alt="">
-                        </picture>
-                        <div class="footer__text">お近くの教室を探す</div>
-                    </a>
-                </div>
-            </div>
+            <div class="footer__img"><img src="/assets/image/footer_logo.svg" alt="Kirameki"></div>
+            <nav class="footer__item">
+                <ul>
+                    <li>会社概要</li>
+                    <li>個人情報保護ポリシー</li>
+                    <li>お問い合わせ</li>
+                </ul>
+            </nav>
             <div class="footer__bottom">
-                <small class="copyright">copyright© 2023 Kira-Kira Juku All Rights Reserved.</small>
+                <small class="copyright">© 2023 Kira-meki Inc. All rights reserved.</small>
             </div>
         </div>
     </footer>
@@ -300,6 +177,8 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- Smart Tab -->
     <script src="https://cdn.jsdelivr.net/npm/jquery-smarttab@4/dist/js/jquery.smartTab.min.js"></script>
     <script src="/assets/script/main.js"></script>

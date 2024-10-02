@@ -1,0 +1,493 @@
+@charset "UTF-8";
+
+$sp:767px;
+$md:1200px;
+$pc:768px;
+
+@mixin sp {
+    @media screen and (max-width: ($sp)) {
+        @content;
+    }
+}
+@mixin md {
+    @media screen and (max-width: $md) and (min-width: $pc){
+        @content;
+    }
+}
+@mixin pc {
+    @media screen and (min-width: ($pc)) {
+        @content;
+    }
+}
+
+html {
+    scroll-behavior: smooth;  /* スムーススクロールでリンクへ飛ぶ */
+    scroll-padding-top: 10rem;  /* スムーススクロールでheader高さ分などの位置調整 */
+    font-size: calc(10 * 100vw / 390);
+    /* 390はSPデザインカンプの幅 */
+    /* 変換サイト・ツールなどで、 390pxの幅での10pxを変換して2.56vwなのでそれを当ててもよい */
+    /* font-size: 2.564102vw; */
+}
+@media (min-width:768px) {
+    html {
+        font-size: calc(10 * 100vw / 1200);
+        /* 1200はPCカンプのコンテンツ幅 */
+    }
+}
+@media (min-width: 1200px) {
+    html {
+        font-size: 62.5%;
+    }
+}
+
+
+body {
+    font-family: "Noto Serif JP";
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #000;
+}
+* {
+    line-height: 1.2;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+a:hover {
+    opacity: 0.5;
+}
+
+img {
+    max-width: 100%;
+}
+
+u {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+
+    @include pc {
+        justify-content: space-between;
+    }
+}
+
+.no-sp {
+    display: block;
+}
+
+.no-pc {
+    display: inherit;
+
+    @include pc {
+        display: none;
+    }
+}
+
+/* top
+-----------------------------------------*/
+.top {
+    background-image: url("/assets/image/main_sp.jpg");
+    background-size: 100% 45rem;
+    background-position: top left;
+    padding: 2.9rem 2rem 5.9rem;
+    text-align: center;
+    min-height: 45rem;
+
+    @include pc {
+        background-image: url("/assets/image/main_pc.jpg");
+        background-size: contain;
+    }
+
+    &__logo {
+        font-size: 2.4rem;
+    }
+    &__title {
+        text-align: left;
+        padding-top: 106%;
+    }
+    h1 {
+        font-size: 4.1rem;
+        font-family: Marcellus;
+        line-height: calc(49 / 41);
+        margin: 0 0 1.2rem 0;
+        max-width: 24.6rem;
+        letter-spacing: 1.23rem;
+    }
+    p {
+        font-size: 2rem;
+        line-height: calc(24 / 20);
+        letter-spacing: 0.6rem;
+    }
+}
+
+/* btn
+---------------------------------------- */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30rem;
+    padding: 2.1rem 6rem 1.9rem 6rem;
+    border-radius: 3.4rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 auto;
+
+    @include pc {
+        width: 32rem;
+        padding: 2rem 4.1rem;
+        font-size: 2rem;
+    }
+    &__contents {
+        margin: 0 1.6rem 5rem;
+
+        h1 {
+            color: #111111;
+            font-size: 1.8rem;
+            line-height: calc(22 / 18);
+            font-weight: 600;
+            padding: 2.5rem 0 1.2rem;
+            text-align: center;
+        }
+        p {
+            color: #111111;
+            font-size: 1.4rem;
+            line-height: calc(17 / 14);
+            font-weight: 600;
+            padding: 0 0 2.1rem 0;
+            text-align: center;
+        }
+    }
+    &__item {
+        background-color: #F0F4FF;
+    }
+    &__form {
+        margin: 0 auto;
+        width: 30rem;
+        padding: 0 0 3.4rem;
+    }
+    &__form01 {
+        background-color: #46C4DB;
+        margin: 0 0 2rem 0;
+
+        &:hover {
+            background-color: #FFF;
+            color: #46C4DB;
+            border: 0.2rem solid #46C4DB;
+        }
+    }
+    &__form02 {
+        background-color: #5DD5AB;
+
+        &:hover {
+            background-color: #FFF;
+            color: #5DD5AB;
+            border: 0.2rem solid #5DD5AB;
+        }
+    }
+}
+
+/* mask
+---------------------------------------- */
+.mask {
+    background-image: url("/assets/image/mask_sp.jpg");
+    background-size: cover;
+    padding: 4.8rem 1.6rem;
+    min-height: 68rem;
+
+    @include pc {
+        background-image: url("/assets/image/mask_pc.jpg");
+    }
+    &__container {
+        color: #fff;
+    }
+    h1 {
+        font-family: "EB Garamond";
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+        padding: 0 0 1.2rem 0;
+    }
+    h2 {
+        font-size: 2.4rem;
+        font-weight: 600;
+        text-align: center;
+    }
+    p {
+        font-size: 1.4rem;
+        line-height: calc(32 / 14);
+        text-shadow: 0 0.3rem 0.6rem #00000029;
+        padding: 3.1rem 0 0 0;
+    }
+}
+
+/* voice
+---------------------------------------- */
+.voice {
+    padding: 5rem 1.6rem 4rem;
+    margin: 0 auto;
+    max-width: 102.4rem;
+
+    @include pc {
+        padding: 8rem 1.6rem 4.5rem;
+        max-width: unset;
+    }
+
+    &__title {
+        font-size: 3rem;
+        font-family: "EB Garamond";
+        font-weight: 700;
+        text-align: center;
+    }
+    &__title--jp {
+        font-size: 1.6rem;
+        font-weight: 600;
+        padding: 0.8rem 0 3.9rem 0;
+        text-align: center;
+
+        @include pc {
+            font-size: 2rem;
+            padding: 1.8rem 0 0 0;
+        }
+    }
+    .swiper {
+        padding: 0.8rem 3.9rem;
+        margin: 0 auto;
+        position: relative;
+
+        @include pc {
+            padding: 2rem 9rem;
+            max-width: 115.6rem;
+        }
+
+        &-slide {
+            padding: 2.8rem 1.5rem 3.4rem;
+            background-color: #DBF7F9;
+            width: 28rem;
+            margin: 0 0 1.6rem 0;
+
+            @include sp {
+                padding: 3rem 1.1rem 3rem;
+            }
+        }
+        &__img {
+            width: 8rem;
+            margin: 0 auto;
+        }
+        &__ppl {
+            font-size: 1.4rem;
+            text-align: center;
+            padding: 1.2rem 0 2.2rem;
+        }
+        p {
+            font-size: 1.4rem;
+            line-height: calc(28 / 14);
+
+            @include pc {
+                font-size: 1.6rem;
+                line-height: calc(28 / 16);
+            }
+        }
+
+        &-pagination {
+            color: #EEEEEE;
+            position: relative;
+
+            &-active {
+                color: #00AFBF;
+            }
+        }
+        &-button-next,
+        &-button-prev {
+            background-size: contain;
+            width: 3.2rem;
+            height: 3.2rem;
+            cursor: pointer;
+            position: absolute;
+            top: 48%;
+
+            @include pc {
+                width: 4.8rem;
+                height: 4.8rem;
+            }
+            &::after {
+                content: "";
+            }
+
+        }
+        &-button-prev {
+            background-image: url(/assets/image/arrow_left.svg);
+            left: 0%;
+
+            @include pc {
+                top: 54.5%;
+                transform: translateY(-54.5%);
+            }
+        }
+        &-button-next {
+            background-image: url(/assets/image/arrow_right.svg);
+            right: 0%;
+
+            @include pc {
+                top: 54.5%;
+                transform: translateY(-54.5%);
+            }
+        }
+    }
+}
+
+/* questions
+---------------------------------------- */
+.qu {
+    padding: 3.2rem 1.6rem;
+    background: transparent linear-gradient(90deg, #F4FFE8 0%, #C6F0FE 100%);
+
+    &__title {
+        font-size: 3rem;
+        font-family: "EB Garamond";
+        font-weight: 700;
+        text-align: center;
+    }
+    &__title--jp {
+        font-size: 1.6rem;
+        font-weight: 600;
+        padding: 0.8rem 0 3.9rem 0;
+        text-align: center;
+
+        @include pc {
+            font-size: 2rem;
+            padding: 1.8rem 0 0 0;
+        }
+    }
+    dl {
+        background-color: #fff;
+        color: #444444;
+        font-size: 1.5rem;
+        line-height: calc(28 / 15);
+        margin-bottom: 2rem;
+    }
+    dt {
+        padding: 2rem 4.3rem 1.5rem 4.5rem;
+        position: relative;
+        cursor: pointer;
+    }
+    dl:nth-of-type(3) dt {
+        letter-spacing: 0.01rem;
+    }
+    dt::before {
+        content: "Q." ;
+        display: inline-block;
+        font-family: "EB Garamond";
+        font-size: 1.6rem;
+        line-height: calc(32 / 16);
+        text-indent: -3rem;
+    }
+    dt::after {
+        content: "" ;
+        display: inline-block;
+        background-image: url(/assets/image/caret_down.svg);
+        position: absolute;
+        width: 1rem;
+        height: 0.6rem;
+        background-size: contain;
+        right: 1.5rem;
+        top: 3.5rem;
+    }
+    dl.open dt::after {
+        content: "" ;
+        background-image: url(/assets/image/caret_up.svg);
+        position: absolute;
+        width: 1rem;
+        height: 0.6rem;
+        background-size: contain;
+        right: 1.5rem;
+        top: 3.5rem;
+    }
+    dd {
+        padding: 1rem 1.7rem 3.9rem 4.4rem;
+        display: none;
+        font-size: 1.5rem;
+        line-height: calc(28 / 15);
+    }
+    dd::before {
+        content: "A." ;
+        display: inline-block;
+        font-size: 1.6rem;
+        line-height: calc(32 / 16);
+        text-indent: -3rem;
+    }
+}
+
+/* footer
+-------------------------------------------- */
+.footer {
+    background-color: #0071CE;
+    padding: 2.9rem 1.6rem 2.4rem;
+
+    &__container {
+        margin: 0 auto;
+    }
+    &__img {
+        max-width: 28rem;
+        margin: 0 auto;
+        padding: 0 0 2.9rem 0;
+        text-align: center;
+    }
+    &__item {
+        display: flex;
+        justify-content: center;
+        font-size: 1.2rem;
+        line-height: calc(14 / 12);
+        color: #fff;
+
+        @include pc {
+
+        }
+    }
+    ul {
+        display: flex;
+        gap: 3rem;
+    }
+
+    li {
+        display: flex;
+        gap: 3rem;
+    }
+    .footer__bottom {
+        text-align: center;
+        padding: 3.2rem 0 0 0;
+
+        @include pc {
+            padding: 0 0 3.2rem 0;
+        }
+    }
+    .copyright {
+        font-size: 1.1rem;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 0.05rem;
+
+        @include pc {
+            padding: 3.2rem 0;
+            font-size: 1.3rem;
+            letter-spacing: 0.04rem;
+        }
+
+    }
+}
