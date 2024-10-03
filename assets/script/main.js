@@ -38,3 +38,39 @@ $('.qu dt').on('click',function() {
   $(this).parent().toggleClass("open");
   $(this).next().slideToggle();
 });
+
+
+/* scroll
+-----------------------------------------*/
+$(document).ready(function() {
+  const scrollButton = $('.scroll');
+  const footer = $('footer');
+
+  $(window).scroll(function() {
+      // スクロール位置が200pxを超えたらボタンを表示
+      if ($(this).scrollTop() > 200) {
+          scrollButton.fadeIn();
+      } else {
+          scrollButton.fadeOut();
+      }
+
+      // フッターとの重なりを防ぐ位置調整
+      if ($(window).scrollTop() + $(window).height() > footer.offset().top) {
+          scrollButton.css({
+              position: 'absolute',
+              bottom: (($(window).height() - footer.offset().top) + 0) + 'px'
+          });
+      } else {
+          scrollButton.css({
+              position: 'fixed',
+              bottom: '0rem',
+          });
+      }
+  });
+
+  // ボタンクリック時にトップへスムーズスクロール
+  scrollButton.find('a').on('click', function(event) {
+      event.preventDefault(); // デフォルトのリンク動作を無効化
+      $('html, body').animate({ scrollTop: $('#top').offset().top }, 600); // スムーズスクロール
+    });
+});
