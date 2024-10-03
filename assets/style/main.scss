@@ -97,29 +97,75 @@ li {
 /* top
 -----------------------------------------*/
 .top {
-    background-image: url("/assets/image/main_sp.jpg");
-    background-size: 100% 45rem;
-    background-position: top left;
-    padding: 2.9rem 2rem 5.9rem;
-    text-align: center;
-    min-height: 45rem;
-
     @include pc {
-        background-image: url("/assets/image/main_pc.jpg");
-        background-size: contain;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+    &__container {
+        background-image: url("/assets/image/main_sp.jpg");
+        background-size: 100% 45rem;
+        background-position: top left;
+        padding: 2.9rem 2rem 5.9rem;
+        text-align: center;
+        min-height: 45rem;
+
+        @include pc {
+            background-image: url("/assets/image/main_pc.jpg");
+            height: auto;
+            width: 100%;
+            min-height: 72rem;
+            overflow: hidden;
+            padding: 3.2rem 2rem 5.9rem;
+
+            @media (max-width:1500px) {
+                background-size: cover;
+                background-position: center;
+            }
+            @media (min-width:1501px) {
+                background-size: cover;
+                background-position: center;
+                padding-top: calc(720 / 1500* 100%);
+                position: relative;
+                height: 0;
+            }
+        }
     }
 
     &__logo {
         font-size: 2.4rem;
+
+        @include pc {
+            font-size: 2.8rem;
+
+            @media (min-width:1501px) {
+                padding-top: 0px;
+                margin: 0 auto;
+                position: absolute;
+                top: 6%;
+                left: 46%;
+            }
+        }
     }
     &__title {
         text-align: left;
         padding-top: 106%;
 
         @include pc {
-            padding-top: 10rem;
+            padding-top: 20rem;
             margin: 0 auto;
-            max-width: 100rem;
+            max-width: 106rem;
+
+            @media (min-width:1501px) {
+                padding-top: 0px;
+                margin: 0 auto;
+                max-width: 106rem;
+                position: absolute;
+                top: 36%;
+                left: 16%;
+            }
         }
     }
     h1 {
@@ -129,11 +175,22 @@ li {
         margin: 0 0 1.2rem 0;
         max-width: 24.6rem;
         letter-spacing: 1.23rem;
+
+        @include pc {
+            font-size: 5rem;
+            line-height: calc(68 / 50);
+            margin: 0 0 1rem 0;
+        }
     }
     p {
         font-size: 2rem;
         line-height: calc(24 / 20);
         letter-spacing: 0.6rem;
+
+        @include pc {
+            font-size: 2.5rem;
+            line-height: calc(36 / 25);
+        }
     }
 }
 
@@ -151,13 +208,14 @@ li {
     color: #fff;
     margin: 0 auto;
 
-    @include pc {
-        width: 32rem;
-        padding: 2rem 4.1rem;
-        font-size: 2rem;
-    }
     &__contents {
         margin: 0 1.6rem 5rem;
+
+        @include pc {
+            max-width: 100rem;
+            margin: 0 auto;
+            padding: 4.8rem 0;
+        }
 
         h1 {
             color: #111111;
@@ -166,6 +224,12 @@ li {
             font-weight: 600;
             padding: 2.5rem 0 1.2rem;
             text-align: center;
+
+            @include pc {
+                font-size: 2.4rem;
+                line-height: calc(35 / 24);
+                padding: 4rem 0 0 4.8rem;
+            }
         }
         p {
             color: #111111;
@@ -174,19 +238,53 @@ li {
             font-weight: 600;
             padding: 0 0 2.1rem 0;
             text-align: center;
+
+            @include pc {
+                font-size: 1.6rem;
+                line-height: calc(23 / 16);
+                padding: 0.8rem 0 4rem 4.8rem;
+                text-align: left;
+            }
+        }
+        li {
+            @include pc {
+                margin: 4.4rem 0;
+            }
         }
     }
     &__item {
         background-color: #F0F4FF;
+
+        @include pc {
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__title {
+        @include pc {
+            display: flex;
+            flex-direction: column;
+        }
     }
     &__form {
         margin: 0 auto;
         width: 30rem;
         padding: 0 0 3.4rem;
+
+        @include pc {
+            display: flex;
+            padding: 0;
+            gap: 3.2rem;
+            margin: 0;
+        }
     }
     &__form01 {
         background-color: #46C4DB;
         margin: 0 0 2rem 0;
+
+        @include pc {
+            margin: 0 0 0 6.4rem;
+        }
 
         &:hover {
             background-color: #FFF;
@@ -196,6 +294,10 @@ li {
     }
     &__form02 {
         background-color: #5DD5AB;
+
+        @include pc {
+            margin: 0 4.8rem 0 0;
+        }
 
         &:hover {
             background-color: #FFF;
@@ -272,6 +374,9 @@ li {
         padding: 0.8rem 3.9rem;
         margin: 0 auto;
         position: relative;
+        --swiper-pagination-color: #00AFBF;
+        --swiper-pagination-bullet-inactive-color: #EEEEEE;
+        --swiper-pagination-bullet-inactive-opacity: 1;
 
         @include pc {
             padding: 2rem 9rem;
@@ -304,15 +409,6 @@ li {
             @include pc {
                 font-size: 1.6rem;
                 line-height: calc(28 / 16);
-            }
-        }
-
-        &-pagination {
-            color: #EEEEEE;
-            position: relative;
-
-            &-active {
-                color: #00AFBF;
             }
         }
         &-button-next,

@@ -78,7 +78,16 @@ li {
 
 /* top
 -----------------------------------------*/
-.top {
+@media screen and (min-width: 768px) {
+  .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+}
+.top__container {
   background-image: url("/assets/image/main_sp.jpg");
   background-size: 100% 45rem;
   background-position: top left;
@@ -87,13 +96,46 @@ li {
   min-height: 45rem;
 }
 @media screen and (min-width: 768px) {
-  .top {
+  .top__container {
     background-image: url("/assets/image/main_pc.jpg");
-    background-size: contain;
+    height: auto;
+    width: 100%;
+    min-height: 72rem;
+    overflow: hidden;
+    padding: 3.2rem 2rem 5.9rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  .top__container {
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1501px) {
+  .top__container {
+    background-size: cover;
+    background-position: center;
+    padding-top: 48%;
+    position: relative;
+    height: 0;
   }
 }
 .top__logo {
   font-size: 2.4rem;
+}
+@media screen and (min-width: 768px) {
+  .top__logo {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1501px) {
+  .top__logo {
+    padding-top: 0px;
+    margin: 0 auto;
+    position: absolute;
+    top: 6%;
+    left: 46%;
+  }
 }
 .top__title {
   text-align: left;
@@ -101,9 +143,19 @@ li {
 }
 @media screen and (min-width: 768px) {
   .top__title {
-    padding-top: 10rem;
+    padding-top: 20rem;
     margin: 0 auto;
-    max-width: 100rem;
+    max-width: 106rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1501px) {
+  .top__title {
+    padding-top: 0px;
+    margin: 0 auto;
+    max-width: 106rem;
+    position: absolute;
+    top: 36%;
+    left: 16%;
   }
 }
 .top h1 {
@@ -114,10 +166,23 @@ li {
   max-width: 24.6rem;
   letter-spacing: 1.23rem;
 }
+@media screen and (min-width: 768px) {
+  .top h1 {
+    font-size: 5rem;
+    line-height: 1.36;
+    margin: 0 0 1rem 0;
+  }
+}
 .top p {
   font-size: 2rem;
   line-height: 1.2;
   letter-spacing: 0.6rem;
+}
+@media screen and (min-width: 768px) {
+  .top p {
+    font-size: 2.5rem;
+    line-height: 1.44;
+  }
 }
 
 /* btn
@@ -134,15 +199,15 @@ li {
   color: #fff;
   margin: 0 auto;
 }
-@media screen and (min-width: 768px) {
-  .btn {
-    width: 32rem;
-    padding: 2rem 4.1rem;
-    font-size: 2rem;
-  }
-}
 .btn__contents {
   margin: 0 1.6rem 5rem;
+}
+@media screen and (min-width: 768px) {
+  .btn__contents {
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 4.8rem 0;
+  }
 }
 .btn__contents h1 {
   color: #111111;
@@ -152,6 +217,13 @@ li {
   padding: 2.5rem 0 1.2rem;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .btn__contents h1 {
+    font-size: 2.4rem;
+    line-height: 1.4583333333;
+    padding: 4rem 0 0 4.8rem;
+  }
+}
 .btn__contents p {
   color: #111111;
   font-size: 1.4rem;
@@ -160,17 +232,55 @@ li {
   padding: 0 0 2.1rem 0;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .btn__contents p {
+    font-size: 1.6rem;
+    line-height: 1.4375;
+    padding: 0.8rem 0 4rem 4.8rem;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  .btn__contents li {
+    margin: 4.4rem 0;
+  }
+}
 .btn__item {
   background-color: #F0F4FF;
+}
+@media screen and (min-width: 768px) {
+  .btn__item {
+    display: flex;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .btn__title {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .btn__form {
   margin: 0 auto;
   width: 30rem;
   padding: 0 0 3.4rem;
 }
+@media screen and (min-width: 768px) {
+  .btn__form {
+    display: flex;
+    padding: 0;
+    gap: 3.2rem;
+    margin: 0;
+  }
+}
 .btn__form01 {
   background-color: #46C4DB;
   margin: 0 0 2rem 0;
+}
+@media screen and (min-width: 768px) {
+  .btn__form01 {
+    margin: 0 0 0 6.4rem;
+  }
 }
 .btn__form01:hover {
   background-color: #FFF;
@@ -179,6 +289,11 @@ li {
 }
 .btn__form02 {
   background-color: #5DD5AB;
+}
+@media screen and (min-width: 768px) {
+  .btn__form02 {
+    margin: 0 4.8rem 0 0;
+  }
 }
 .btn__form02:hover {
   background-color: #FFF;
@@ -256,6 +371,9 @@ li {
   padding: 0.8rem 3.9rem;
   margin: 0 auto;
   position: relative;
+  --swiper-pagination-color: #00AFBF;
+  --swiper-pagination-bullet-inactive-color: #EEEEEE;
+  --swiper-pagination-bullet-inactive-opacity: 1;
 }
 @media screen and (min-width: 768px) {
   .voice .swiper {
@@ -292,13 +410,6 @@ li {
     font-size: 1.6rem;
     line-height: 1.75;
   }
-}
-.voice .swiper-pagination {
-  color: #EEEEEE;
-  position: relative;
-}
-.voice .swiper-pagination-active {
-  color: #00AFBF;
 }
 .voice .swiper-button-next, .voice .swiper-button-prev {
   background-size: contain;
