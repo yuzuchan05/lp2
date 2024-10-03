@@ -10,7 +10,7 @@ var mySwiper = new Swiper(".swiper", {
   watchOverflow: true, // スライド数が少ない場合に無限ループを防ぐ
   navigation: {
       nextEl: '.swiper-button-next',
-      prevEl: '.swiper_button-prev',
+      prevEl: '.swiper-button-prev',
   },
   pagination: {
       el: '.swiper-pagination',

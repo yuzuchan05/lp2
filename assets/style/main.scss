@@ -370,6 +370,11 @@ li {
             padding: 1.8rem 0 0 0;
         }
     }
+    .swiper__container {
+        @include pc {
+            
+        }
+    }
     .swiper {
         padding: 0.8rem 3.9rem;
         margin: 0 auto;
@@ -379,8 +384,8 @@ li {
         --swiper-pagination-bullet-inactive-opacity: 1;
 
         @include pc {
-            padding: 2rem 9rem;
-            max-width: 115.6rem;
+            padding: 2rem 0;
+            max-width: 98rem;
         }
 
         &-slide {

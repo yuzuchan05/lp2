@@ -377,8 +377,8 @@ li {
 }
 @media screen and (min-width: 768px) {
   .voice .swiper {
-    padding: 2rem 9rem;
-    max-width: 115.6rem;
+    padding: 2rem 0;
+    max-width: 98rem;
   }
 }
 .voice .swiper-slide {
