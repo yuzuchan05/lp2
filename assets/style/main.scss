@@ -317,9 +317,25 @@ li {
 
     @include pc {
         background-image: url("/assets/image/mask_pc.jpg");
+        min-height: 55rem;
+        padding: 0;
     }
     &__container {
         color: #fff;
+
+        @include pc {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            padding: 12.7rem 4rem 0 0;
+        }
+    }
+    &__item {
+        @include pc {
+            margin-left: 57%;
+            width: 46.7rem;
+        }
     }
     h1 {
         font-family: "EB Garamond";
@@ -327,11 +343,19 @@ li {
         font-weight: 700;
         text-align: center;
         padding: 0 0 1.2rem 0;
+
+        @include pc {
+            text-align: left;
+        }
     }
     h2 {
         font-size: 2.4rem;
         font-weight: 600;
         text-align: center;
+
+        @include pc {
+            text-align: left;
+        }
     }
     p {
         font-size: 1.4rem;
@@ -372,7 +396,9 @@ li {
     }
     .swiper__container {
         @include pc {
-            
+            position: relative;
+            width: 100%;
+            max-width: 100%;
         }
     }
     .swiper {
@@ -416,6 +442,15 @@ li {
                 line-height: calc(28 / 16);
             }
         }
+        &-pagination {
+            @include pc {
+                --swiper-pagination-color: #00AFBF;
+                --swiper-pagination-bullet-inactive-color: #EEEEEE;
+                --swiper-pagination-bullet-inactive-opacity: 1;
+                position: absolute;
+                bottom: 1%;
+            }
+        }
         &-button-next,
         &-button-prev {
             background-size: contain;
@@ -439,8 +474,9 @@ li {
             left: 0%;
 
             @include pc {
-                top: 54.5%;
-                transform: translateY(-54.5%);
+                top: 49%;
+                transform: translateY(-49%);
+                left: 12%;
             }
         }
         &-button-next {
@@ -448,8 +484,9 @@ li {
             right: 0%;
 
             @include pc {
-                top: 54.5%;
-                transform: translateY(-54.5%);
+                top: 49%;
+                transform: translateY(-49%);
+                right: 12%;
             }
         }
     }

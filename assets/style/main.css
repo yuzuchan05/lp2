@@ -312,10 +312,27 @@ li {
 @media screen and (min-width: 768px) {
   .mask {
     background-image: url("/assets/image/mask_pc.jpg");
+    min-height: 55rem;
+    padding: 0;
   }
 }
 .mask__container {
   color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .mask__container {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    padding: 12.7rem 4rem 0 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mask__item {
+    margin-left: 57%;
+    width: 46.7rem;
+  }
 }
 .mask h1 {
   font-family: "EB Garamond";
@@ -324,10 +341,20 @@ li {
   text-align: center;
   padding: 0 0 1.2rem 0;
 }
+@media screen and (min-width: 768px) {
+  .mask h1 {
+    text-align: left;
+  }
+}
 .mask h2 {
   font-size: 2.4rem;
   font-weight: 600;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .mask h2 {
+    text-align: left;
+  }
 }
 .mask p {
   font-size: 1.4rem;
@@ -365,6 +392,13 @@ li {
   .voice__title--jp {
     font-size: 2rem;
     padding: 1.8rem 0 0 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .voice .swiper__container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
   }
 }
 .voice .swiper {
@@ -411,6 +445,15 @@ li {
     line-height: 1.75;
   }
 }
+@media screen and (min-width: 768px) {
+  .voice .swiper-pagination {
+    --swiper-pagination-color: #00AFBF;
+    --swiper-pagination-bullet-inactive-color: #EEEEEE;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    position: absolute;
+    bottom: 1%;
+  }
+}
 .voice .swiper-button-next, .voice .swiper-button-prev {
   background-size: contain;
   width: 3.2rem;
@@ -434,8 +477,9 @@ li {
 }
 @media screen and (min-width: 768px) {
   .voice .swiper-button-prev {
-    top: 54.5%;
-    transform: translateY(-54.5%);
+    top: 49%;
+    transform: translateY(-49%);
+    left: 12%;
   }
 }
 .voice .swiper-button-next {
@@ -444,8 +488,9 @@ li {
 }
 @media screen and (min-width: 768px) {
   .voice .swiper-button-next {
-    top: 54.5%;
-    transform: translateY(-54.5%);
+    top: 49%;
+    transform: translateY(-49%);
+    right: 12%;
   }
 }
 
