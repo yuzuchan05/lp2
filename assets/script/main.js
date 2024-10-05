@@ -16,7 +16,15 @@ var mySwiper = new Swiper(".swiper", {
       el: '.swiper-pagination',
       clickable: true,
       bulletClass: 'swiper-pagination-bullet',
-      bulletActiveClass: 'swiper-pagination-bullet-active'
+      bulletActiveClass: 'swiper-pagination-bullet-active',
+      renderBullet: function (index, className) {
+          // 画面幅に応じてページネーションのドット数を変更
+          var dotsNum = window.innerWidth <= 767 ? 6 : 2;  // SPでは6つ、PCでは2つ
+          if (index < dotsNum) {
+              return '<span class="' + className + '"></span>';
+          }
+          return '';
+      },
   },
   breakpoints: {
       768: {

@@ -78,20 +78,11 @@ li {
 
 /* top
 -----------------------------------------*/
-@media screen and (min-width: 768px) {
-  .top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-  }
-}
 .top__container {
   background-image: url("/assets/image/main_sp.jpg");
   background-size: 100% 45rem;
   background-position: top left;
-  padding: 2.9rem 2rem 5.9rem;
+  padding: 2.9rem 2.2rem 5.2rem;
   text-align: center;
   min-height: 45rem;
 }
@@ -102,7 +93,7 @@ li {
     width: 100%;
     min-height: 72rem;
     overflow: hidden;
-    padding: 3.2rem 2rem 5.9rem;
+    padding: 3.8rem 2rem 5.9rem;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1500px) {
@@ -121,11 +112,11 @@ li {
   }
 }
 .top__logo {
-  font-size: 2.4rem;
+  width: 14.3rem;
 }
 @media screen and (min-width: 768px) {
   .top__logo {
-    font-size: 2.8rem;
+    width: 16.6rem;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1501px) {
@@ -139,13 +130,13 @@ li {
 }
 .top__title {
   text-align: left;
-  padding-top: 106%;
+  padding-top: 107%;
 }
 @media screen and (min-width: 768px) {
   .top__title {
-    padding-top: 20rem;
+    padding-top: 21rem;
     margin: 0 auto;
-    max-width: 106rem;
+    max-width: 105.5rem;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1501px) {
@@ -161,8 +152,8 @@ li {
 .top h1 {
   font-size: 4.1rem;
   font-family: Marcellus;
-  line-height: 1.1951219512;
-  margin: 0 0 1.2rem 0;
+  line-height: 1.23;
+  margin: 0 0 1.15rem 0;
   max-width: 24.6rem;
   letter-spacing: 1.23rem;
 }
@@ -171,6 +162,7 @@ li {
     font-size: 5rem;
     line-height: 1.36;
     margin: 0 0 1rem 0;
+    letter-spacing: 1.48rem;
   }
 }
 .top p {
@@ -182,6 +174,7 @@ li {
   .top p {
     font-size: 2.5rem;
     line-height: 1.44;
+    letter-spacing: 0.76rem;
   }
 }
 
@@ -192,7 +185,7 @@ li {
   align-items: center;
   justify-content: center;
   width: 30rem;
-  padding: 2.1rem 6rem 1.9rem 6rem;
+  padding: 1.8rem 6rem 1.9rem 6rem;
   border-radius: 3.4rem;
   font-size: 1.8rem;
   font-weight: 600;
@@ -214,7 +207,8 @@ li {
   font-size: 1.8rem;
   line-height: 1.2222222222;
   font-weight: 600;
-  padding: 2.5rem 0 1.2rem;
+  padding: 2.3rem 0 0.8rem;
+  letter-spacing: 0.17rem;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
@@ -222,6 +216,7 @@ li {
     font-size: 2.4rem;
     line-height: 1.4583333333;
     padding: 4rem 0 0 4.8rem;
+    letter-spacing: 0.25rem;
   }
 }
 .btn__contents p {
@@ -231,6 +226,7 @@ li {
   font-weight: 600;
   padding: 0 0 2.1rem 0;
   text-align: center;
+  letter-spacing: 0.125rem;
 }
 @media screen and (min-width: 768px) {
   .btn__contents p {
@@ -279,7 +275,7 @@ li {
 }
 @media screen and (min-width: 768px) {
   .btn__form01 {
-    margin: 0 0 0 6.4rem;
+    margin: 0 0 0 6.2rem;
   }
 }
 .btn__form01:hover {
@@ -314,6 +310,25 @@ li {
     background-image: url("/assets/image/mask_pc.jpg");
     min-height: 55rem;
     padding: 0;
+    height: auto;
+    width: 100%;
+    min-height: 55rem;
+    overflow: hidden;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1500px) {
+  .mask {
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1501px) {
+  .mask {
+    background-size: cover;
+    background-position: center;
+    padding-top: 36.6666666667%;
+    position: relative;
+    height: 0;
   }
 }
 .mask__container {
@@ -325,13 +340,23 @@ li {
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    padding: 12.7rem 4rem 0 0;
+    padding: 12.5rem 4rem 0 0;
   }
 }
 @media screen and (min-width: 768px) {
   .mask__item {
-    margin-left: 57%;
+    margin-left: 56.8%;
     width: 46.7rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1501px) {
+  .mask__item {
+    padding-top: 0px;
+    margin: 0 auto;
+    width: 42.7rem;
+    position: absolute;
+    top: 22%;
+    right: 13%;
   }
 }
 .mask h1 {
@@ -344,6 +369,9 @@ li {
 @media screen and (min-width: 768px) {
   .mask h1 {
     text-align: left;
+    font-size: 3.8rem;
+    line-height: 1.4210526316;
+    padding: 0 0 1rem 0;
   }
 }
 .mask h2 {
@@ -360,19 +388,19 @@ li {
   font-size: 1.4rem;
   line-height: 2.2857142857;
   text-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.1607843137);
-  padding: 3.1rem 0 0 0;
+  padding: 1.8rem 0 0 0;
 }
 
 /* voice
 ---------------------------------------- */
 .voice {
-  padding: 5rem 1.6rem 4rem;
+  padding: 5rem 1.6rem 5rem;
   margin: 0 auto;
   max-width: 102.4rem;
 }
 @media screen and (min-width: 768px) {
   .voice {
-    padding: 8rem 1.6rem 4.5rem;
+    padding: 7.7rem 1.6rem 4.5rem;
     max-width: unset;
   }
 }
@@ -381,33 +409,40 @@ li {
   font-family: "EB Garamond";
   font-weight: 700;
   text-align: center;
+  letter-spacing: 0.15rem;
+}
+@media screen and (min-width: 768px) {
+  .voice__title {
+    font-size: 4.5rem;
+    line-height: 1.40625;
+    letter-spacing: 0.22rem;
+  }
 }
 .voice__title--jp {
   font-size: 1.6rem;
   font-weight: 600;
-  padding: 0.8rem 0 3.9rem 0;
+  padding: 0.8rem 0 2.9rem 0;
   text-align: center;
+  letter-spacing: 0.08rem;
 }
 @media screen and (min-width: 768px) {
   .voice__title--jp {
     font-size: 2rem;
-    padding: 1.8rem 0 0 0;
+    padding: 0.7rem 0 2.2rem 0;
   }
 }
-@media screen and (min-width: 768px) {
-  .voice .swiper__container {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-  }
+.voice .swiper__container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  --swiper-pagination-color: #00AFBF;
+  --swiper-pagination-bullet-inactive-color: #EEEEEE;
+  --swiper-pagination-bullet-inactive-opacity: 1;
 }
 .voice .swiper {
   padding: 0.8rem 3.9rem;
   margin: 0 auto;
   position: relative;
-  --swiper-pagination-color: #00AFBF;
-  --swiper-pagination-bullet-inactive-color: #EEEEEE;
-  --swiper-pagination-bullet-inactive-opacity: 1;
 }
 @media screen and (min-width: 768px) {
   .voice .swiper {
@@ -416,24 +451,38 @@ li {
   }
 }
 .voice .swiper-slide {
-  padding: 2.8rem 1.5rem 3.4rem;
+  padding: 2.9rem 1.5rem 2.5rem 1.5rem;
   background-color: #DBF7F9;
   width: 28rem;
   margin: 0 0 1.6rem 0;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .voice .swiper-slide {
-    padding: 3rem 1.1rem 3rem;
+    padding: 4rem 1.7rem 3.8rem 1.5rem;
   }
 }
 .voice .swiper__img {
-  width: 8rem;
+  width: 9rem;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .voice .swiper__img {
+    width: 11rem;
+  }
+}
+.voice .swiper img {
+  padding: 0 0.5rem 0 0.4rem;
+}
+@media screen and (min-width: 768px) {
+  .voice .swiper img {
+    width: 100%;
+  }
 }
 .voice .swiper__ppl {
   font-size: 1.4rem;
   text-align: center;
-  padding: 1.2rem 0 2.2rem;
+  padding: 1rem 0 1.6rem;
+  letter-spacing: 0.03rem;
 }
 .voice .swiper p {
   font-size: 1.4rem;
@@ -454,13 +503,22 @@ li {
     bottom: 1%;
   }
 }
+.voice .swiper-pagination-bullets {
+  bottom: -1%;
+}
+@media screen and (min-width: 768px) {
+  .voice .swiper-pagination-bullets {
+    bottom: 0%;
+  }
+}
 .voice .swiper-button-next, .voice .swiper-button-prev {
   background-size: contain;
   width: 3.2rem;
   height: 3.2rem;
   cursor: pointer;
   position: absolute;
-  top: 48%;
+  top: 54%;
+  transform: translateY(-54%);
 }
 @media screen and (min-width: 768px) {
   .voice .swiper-button-next, .voice .swiper-button-prev {
@@ -497,26 +555,39 @@ li {
 /* questions
 ---------------------------------------- */
 .qu {
-  padding: 3.2rem 1.6rem;
+  padding: 3.4rem 1.6rem 1.2rem;
   background: transparent linear-gradient(90deg, #F4FFE8 0%, #C6F0FE 100%);
-  margin-bottom: 5rem;
+  margin-bottom: 5.1rem;
+}
+@media screen and (min-width: 768px) {
+  .qu {
+    margin-bottom: 0;
+  }
 }
 .qu__title {
   font-size: 3rem;
   font-family: "EB Garamond";
   font-weight: 700;
   text-align: center;
+  letter-spacing: 0.15rem;
+}
+@media screen and (min-width: 768px) {
+  .qu__title {
+    font-size: 4.5rem;
+    line-height: 1.40625;
+  }
 }
 .qu__title--jp {
   font-size: 1.6rem;
   font-weight: 600;
   padding: 0.8rem 0 3.9rem 0;
   text-align: center;
+  letter-spacing: 0.09rem;
 }
 @media screen and (min-width: 768px) {
   .qu__title--jp {
     font-size: 2rem;
-    padding: 1.8rem 0 0 0;
+    padding: 0.8rem 0 4rem 0;
   }
 }
 .qu dl {
@@ -526,20 +597,34 @@ li {
   line-height: 1.8666666667;
   margin-bottom: 2rem;
 }
+@media screen and (min-width: 768px) {
+  .qu dl {
+    max-width: 60rem;
+    margin: 0 auto 2.4rem;
+  }
+}
 .qu dt {
-  padding: 2rem 4.3rem 1.5rem 4.5rem;
+  padding: 1.6rem 4.3rem 1.2rem 4.5rem;
   position: relative;
   cursor: pointer;
+  line-height: 1.6;
 }
+.qu dl:nth-of-type(2) dt,
 .qu dl:nth-of-type(3) dt {
-  letter-spacing: 0.01rem;
+  padding: 1.7rem 4.3rem 1.8rem 4.5rem;
+}
+.qu dl:nth-of-type(4) dt {
+  padding: 1.6rem 4.3rem 1.8rem 4.5rem;
+}
+.qu dl:nth-of-type(5) dt {
+  padding: 1.6rem 4.3rem 1.8rem 4.5rem;
 }
 .qu dt::before {
   content: "Q.";
   display: inline-block;
   font-family: "EB Garamond";
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.9;
   text-indent: -3rem;
 }
 .qu dt::after {
@@ -550,8 +635,8 @@ li {
   width: 1rem;
   height: 0.6rem;
   background-size: contain;
-  right: 1.5rem;
-  top: 3.5rem;
+  right: 1.7rem;
+  top: 3.1rem;
 }
 .qu dl.open dt::after {
   content: "";
@@ -560,21 +645,27 @@ li {
   width: 1rem;
   height: 0.6rem;
   background-size: contain;
-  right: 1.5rem;
-  top: 3.5rem;
+  right: 1.7rem;
+  top: 3.1rem;
 }
 .qu dd {
-  padding: 1rem 1.7rem 3.9rem 4.4rem;
+  padding: 0rem 1.2rem 2.9rem 4.4rem;
   display: none;
   font-size: 1.5rem;
-  line-height: 1.8666666667;
+  line-height: 1.86;
+}
+@media screen and (min-width: 768px) {
+  .qu dd {
+    padding: 1rem 4.5rem 3.9rem 4.4rem;
+  }
 }
 .qu dd::before {
   content: "A.";
   display: inline-block;
   font-size: 1.6rem;
-  line-height: 2;
+  line-height: 1.9;
   text-indent: -3rem;
+  padding-left: 0.1rem;
 }
 
 /* scroll
@@ -589,6 +680,11 @@ li {
   width: 4rem;
   height: 4rem;
 }
+@media screen and (min-width: 768px) {
+  .scroll {
+    right: 11%;
+  }
+}
 .scroll:hover {
   background-image: url(/assets/image/Back_top_hover.svg);
 }
@@ -599,14 +695,34 @@ li {
   background-color: #0071CE;
   padding: 2.9rem 1.6rem 2.4rem;
 }
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 3.2rem 1.6rem 3.2rem;
+  }
+}
 .footer__container {
   margin: 0 auto;
 }
+@media screen and (min-width: 768px) {
+  .footer__container {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 15.5rem;
+  }
+}
 .footer__img {
-  max-width: 28rem;
+  width: 16.45rem;
   margin: 0 auto;
-  padding: 0 0 2.9rem 0;
+  padding: 0 0 3.4rem 0;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__img {
+    width: 19rem;
+    margin: unset;
+    padding: 0;
+  }
 }
 .footer__item {
   display: flex;
@@ -614,9 +730,20 @@ li {
   font-size: 1.2rem;
   line-height: 1.1666666667;
 }
+@media screen and (min-width: 768px) {
+  .footer__item {
+    font-size: 1.4rem;
+    margin-left: 1rem;
+  }
+}
 .footer ul {
   display: flex;
   gap: 3rem;
+}
+@media screen and (min-width: 768px) {
+  .footer ul {
+    gap: 3.2rem;
+  }
 }
 .footer li {
   display: flex;
@@ -627,23 +754,22 @@ li {
 }
 .footer .footer__bottom {
   text-align: center;
-  padding: 3.2rem 0 0 0;
+  padding: 2.1rem 0 0 0;
 }
 @media screen and (min-width: 768px) {
   .footer .footer__bottom {
-    padding: 0 0 3.2rem 0;
+    padding: 0;
   }
 }
 .footer .copyright {
   font-size: 1.1rem;
   color: #fff;
   text-align: center;
-  letter-spacing: 0.05rem;
 }
 @media screen and (min-width: 768px) {
   .footer .copyright {
     padding: 3.2rem 0;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     letter-spacing: 0.04rem;
   }
 }/*# sourceMappingURL=main.css.map */
