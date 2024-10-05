@@ -399,7 +399,7 @@ li {
     max-width: 102.4rem;
 
     @include pc {
-        padding: 7.7rem 1.6rem 4.5rem;
+        padding: 7.7rem 1.6rem 7.5rem;
         max-width: unset;
     }
 
@@ -435,6 +435,11 @@ li {
         --swiper-pagination-color: #00AFBF;
         --swiper-pagination-bullet-inactive-color: #EEEEEE;
         --swiper-pagination-bullet-inactive-opacity: 1;
+
+        @include pc {
+            max-width: 115.6rem;
+            margin-inline: auto;
+        }
     }
     .swiper {
         padding: 0.8rem 3.9rem;
@@ -457,18 +462,21 @@ li {
             }
         }
         &__img {
-            width: 9rem;
+            width: 8.5rem;
+            height: 8rem;
             margin: 0 auto;
 
             @include pc {
-                width: 11rem;
+                width: 10.5rem;
+                height: unset;
             }
         }
         img {
-            padding: 0 0.5rem 0 0.4rem;
+            padding-left: 0.5rem;
 
             @include pc {
                 width: 100%;
+                padding-left: 0.5rem;
             }
         }
         &__ppl {
@@ -476,6 +484,10 @@ li {
             text-align: center;
             padding: 1rem 0 1.6rem;
             letter-spacing: 0.03rem;
+
+            @include pc {
+                padding: 1.1rem 0 1.6rem;
+            }
         }
         p {
             font-size: 1.4rem;
@@ -526,9 +538,9 @@ li {
             left: 0%;
 
             @include pc {
-                top: 49%;
-                transform: translateY(-49%);
-                left: 12%;
+                top: 53%;
+                transform: translateY(-50%);
+                left: 0;
             }
         }
         &-button-next {
@@ -536,9 +548,9 @@ li {
             right: 0%;
 
             @include pc {
-                top: 49%;
-                transform: translateY(-49%);
-                right: 12%;
+                top: 53%;
+                transform: translateY(-50%);
+                right: 0;
             }
         }
     }
@@ -553,6 +565,7 @@ li {
 
     @include pc {
         margin-bottom: 0;
+        padding: 3.8rem 1.6rem 1.8rem;
     }
 
     &__title {
@@ -565,6 +578,7 @@ li {
         @include pc {
             font-size: 4.5rem;
             line-height: calc(45 /32);
+            letter-spacing: 0.23rem;
         }
     }
     &__title--jp {
@@ -576,7 +590,7 @@ li {
 
         @include pc {
             font-size: 2rem;
-            padding: 0.8rem 0 4rem 0;
+            padding: 0.8rem 0 4.3rem 0;
         }
     }
     dl {
@@ -596,16 +610,32 @@ li {
         position: relative;
         cursor: pointer;
         line-height: 1.6;
+
+        @include pc {
+            padding: 2.2rem 4.3rem 1.2rem 5.8rem;
+        }
     }
     dl:nth-of-type(2) dt,
     dl:nth-of-type(3) dt {
         padding: 1.7rem 4.3rem 1.8rem 4.5rem;
+
+        @include pc {
+            padding: 2.3rem 4.3rem 1.8rem 5.9rem;
+        }
     }
     dl:nth-of-type(4) dt {
         padding: 1.6rem 4.3rem 1.8rem 4.5rem;
+
+        @include pc {
+            padding: 2.2rem 4.3rem 1.8rem 5.8rem;
+        }
     }
     dl:nth-of-type(5) dt {
         padding: 1.6rem 4.3rem 1.8rem 4.5rem;
+
+        @include pc {
+            padding: 2.2rem 4.3rem 1.8rem 5.8rem;
+        }
     }
     dt::before {
         content: "Q." ;
@@ -613,7 +643,11 @@ li {
         font-family: "EB Garamond";
         font-size: 1.6rem;
         line-height: 1.9;
-        text-indent: -3rem;
+        text-indent: -2.9rem;
+
+        @include pc {
+            text-indent: -3.3rem;
+        }
     }
     dt::after {
         content: "" ;
@@ -625,6 +659,13 @@ li {
         background-size: contain;
         right: 1.7rem;
         top: 3.1rem;
+
+        @include pc {
+            width: 1.2rem;
+            height: 1.2rem;
+            right: 2.5rem;
+            top: 3.2rem;
+        }
     }
     dl.open dt::after {
         content: "" ;
@@ -635,6 +676,13 @@ li {
         background-size: contain;
         right: 1.7rem;
         top: 3.1rem;
+
+        @include pc {
+            width: 1.2rem;
+            height: 1.2rem;
+            right: 2.5rem;
+            top: 3.2rem;
+        }
     }
     dd {
         padding: 0rem 1.2rem 2.9rem 4.4rem;
@@ -643,7 +691,7 @@ li {
         line-height: 1.86;
 
         @include pc {
-            padding: 1rem 4.5rem 3.9rem 4.4rem;
+            padding: 0.1rem 3.5rem 1.9rem 5.8rem;
         }
     }
     dd::before {
@@ -653,6 +701,10 @@ li {
         line-height: 1.9;
         text-indent: -3rem;
         padding-left: 0.1rem;
+
+        @include pc {
+            text-indent: -3.5rem;
+        }
     }
 }
 
@@ -669,7 +721,7 @@ li {
     height: 4rem;
 
     @include pc {
-        right: 11%;
+        right: 10%;
     }
 
     &:hover {
@@ -684,7 +736,7 @@ li {
     padding: 2.9rem 1.6rem 2.4rem;
 
     @include pc {
-        padding: 3.2rem 1.6rem 3.2rem;
+        padding: 3.6rem 1.6rem 4.1rem;
 
     }
 
@@ -693,9 +745,9 @@ li {
 
         @include pc {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: baseline;
-            gap: 15.5rem;
+            margin: 0 16.5rem 0 16.3rem;
         }
     }
     &__img {
@@ -705,9 +757,14 @@ li {
         text-align: center;
 
         @include pc {
-            width: 19rem;
+            width: 19.5rem;
             margin: unset;
             padding: 0;
+        }
+    }
+    img {
+        @include pc {
+            width: 19rem;
         }
     }
     &__item {
@@ -718,7 +775,7 @@ li {
 
         @include pc {
             font-size: 1.4rem;
-            margin-left: 1rem;
+            margin-left: 5rem;
         }
     }
     ul {
@@ -753,7 +810,6 @@ li {
         @include pc {
             padding: 3.2rem 0;
             font-size: 1.2rem;
-            letter-spacing: 0.04rem;
         }
 
     }

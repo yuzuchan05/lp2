@@ -400,7 +400,7 @@ li {
 }
 @media screen and (min-width: 768px) {
   .voice {
-    padding: 7.7rem 1.6rem 4.5rem;
+    padding: 7.7rem 1.6rem 7.5rem;
     max-width: unset;
   }
 }
@@ -439,6 +439,12 @@ li {
   --swiper-pagination-bullet-inactive-color: #EEEEEE;
   --swiper-pagination-bullet-inactive-opacity: 1;
 }
+@media screen and (min-width: 768px) {
+  .voice .swiper__container {
+    max-width: 115.6rem;
+    margin-inline: auto;
+  }
+}
 .voice .swiper {
   padding: 0.8rem 3.9rem;
   margin: 0 auto;
@@ -462,20 +468,23 @@ li {
   }
 }
 .voice .swiper__img {
-  width: 9rem;
+  width: 8.5rem;
+  height: 8rem;
   margin: 0 auto;
 }
 @media screen and (min-width: 768px) {
   .voice .swiper__img {
-    width: 11rem;
+    width: 10.5rem;
+    height: unset;
   }
 }
 .voice .swiper img {
-  padding: 0 0.5rem 0 0.4rem;
+  padding-left: 0.5rem;
 }
 @media screen and (min-width: 768px) {
   .voice .swiper img {
     width: 100%;
+    padding-left: 0.5rem;
   }
 }
 .voice .swiper__ppl {
@@ -483,6 +492,11 @@ li {
   text-align: center;
   padding: 1rem 0 1.6rem;
   letter-spacing: 0.03rem;
+}
+@media screen and (min-width: 768px) {
+  .voice .swiper__ppl {
+    padding: 1.1rem 0 1.6rem;
+  }
 }
 .voice .swiper p {
   font-size: 1.4rem;
@@ -535,9 +549,9 @@ li {
 }
 @media screen and (min-width: 768px) {
   .voice .swiper-button-prev {
-    top: 49%;
-    transform: translateY(-49%);
-    left: 12%;
+    top: 53%;
+    transform: translateY(-50%);
+    left: 0;
   }
 }
 .voice .swiper-button-next {
@@ -546,9 +560,9 @@ li {
 }
 @media screen and (min-width: 768px) {
   .voice .swiper-button-next {
-    top: 49%;
-    transform: translateY(-49%);
-    right: 12%;
+    top: 53%;
+    transform: translateY(-50%);
+    right: 0;
   }
 }
 
@@ -562,6 +576,7 @@ li {
 @media screen and (min-width: 768px) {
   .qu {
     margin-bottom: 0;
+    padding: 3.8rem 1.6rem 1.8rem;
   }
 }
 .qu__title {
@@ -575,6 +590,7 @@ li {
   .qu__title {
     font-size: 4.5rem;
     line-height: 1.40625;
+    letter-spacing: 0.23rem;
   }
 }
 .qu__title--jp {
@@ -587,7 +603,7 @@ li {
 @media screen and (min-width: 768px) {
   .qu__title--jp {
     font-size: 2rem;
-    padding: 0.8rem 0 4rem 0;
+    padding: 0.8rem 0 4.3rem 0;
   }
 }
 .qu dl {
@@ -609,15 +625,36 @@ li {
   cursor: pointer;
   line-height: 1.6;
 }
+@media screen and (min-width: 768px) {
+  .qu dt {
+    padding: 2.2rem 4.3rem 1.2rem 5.8rem;
+  }
+}
 .qu dl:nth-of-type(2) dt,
 .qu dl:nth-of-type(3) dt {
   padding: 1.7rem 4.3rem 1.8rem 4.5rem;
 }
+@media screen and (min-width: 768px) {
+  .qu dl:nth-of-type(2) dt,
+  .qu dl:nth-of-type(3) dt {
+    padding: 2.3rem 4.3rem 1.8rem 5.9rem;
+  }
+}
 .qu dl:nth-of-type(4) dt {
   padding: 1.6rem 4.3rem 1.8rem 4.5rem;
 }
+@media screen and (min-width: 768px) {
+  .qu dl:nth-of-type(4) dt {
+    padding: 2.2rem 4.3rem 1.8rem 5.8rem;
+  }
+}
 .qu dl:nth-of-type(5) dt {
   padding: 1.6rem 4.3rem 1.8rem 4.5rem;
+}
+@media screen and (min-width: 768px) {
+  .qu dl:nth-of-type(5) dt {
+    padding: 2.2rem 4.3rem 1.8rem 5.8rem;
+  }
 }
 .qu dt::before {
   content: "Q.";
@@ -625,7 +662,12 @@ li {
   font-family: "EB Garamond";
   font-size: 1.6rem;
   line-height: 1.9;
-  text-indent: -3rem;
+  text-indent: -2.9rem;
+}
+@media screen and (min-width: 768px) {
+  .qu dt::before {
+    text-indent: -3.3rem;
+  }
 }
 .qu dt::after {
   content: "";
@@ -638,6 +680,14 @@ li {
   right: 1.7rem;
   top: 3.1rem;
 }
+@media screen and (min-width: 768px) {
+  .qu dt::after {
+    width: 1.2rem;
+    height: 1.2rem;
+    right: 2.5rem;
+    top: 3.2rem;
+  }
+}
 .qu dl.open dt::after {
   content: "";
   background-image: url(/assets/image/caret_up.svg);
@@ -648,6 +698,14 @@ li {
   right: 1.7rem;
   top: 3.1rem;
 }
+@media screen and (min-width: 768px) {
+  .qu dl.open dt::after {
+    width: 1.2rem;
+    height: 1.2rem;
+    right: 2.5rem;
+    top: 3.2rem;
+  }
+}
 .qu dd {
   padding: 0rem 1.2rem 2.9rem 4.4rem;
   display: none;
@@ -656,7 +714,7 @@ li {
 }
 @media screen and (min-width: 768px) {
   .qu dd {
-    padding: 1rem 4.5rem 3.9rem 4.4rem;
+    padding: 0.1rem 3.5rem 1.9rem 5.8rem;
   }
 }
 .qu dd::before {
@@ -666,6 +724,11 @@ li {
   line-height: 1.9;
   text-indent: -3rem;
   padding-left: 0.1rem;
+}
+@media screen and (min-width: 768px) {
+  .qu dd::before {
+    text-indent: -3.5rem;
+  }
 }
 
 /* scroll
@@ -682,7 +745,7 @@ li {
 }
 @media screen and (min-width: 768px) {
   .scroll {
-    right: 11%;
+    right: 10%;
   }
 }
 .scroll:hover {
@@ -697,7 +760,7 @@ li {
 }
 @media screen and (min-width: 768px) {
   .footer {
-    padding: 3.2rem 1.6rem 3.2rem;
+    padding: 3.6rem 1.6rem 4.1rem;
   }
 }
 .footer__container {
@@ -706,9 +769,9 @@ li {
 @media screen and (min-width: 768px) {
   .footer__container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: baseline;
-    gap: 15.5rem;
+    margin: 0 16.5rem 0 16.3rem;
   }
 }
 .footer__img {
@@ -719,9 +782,14 @@ li {
 }
 @media screen and (min-width: 768px) {
   .footer__img {
-    width: 19rem;
+    width: 19.5rem;
     margin: unset;
     padding: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer img {
+    width: 19rem;
   }
 }
 .footer__item {
@@ -733,7 +801,7 @@ li {
 @media screen and (min-width: 768px) {
   .footer__item {
     font-size: 1.4rem;
-    margin-left: 1rem;
+    margin-left: 5rem;
   }
 }
 .footer ul {
@@ -770,6 +838,5 @@ li {
   .footer .copyright {
     padding: 3.2rem 0;
     font-size: 1.2rem;
-    letter-spacing: 0.04rem;
   }
 }/*# sourceMappingURL=main.css.map */
