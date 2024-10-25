@@ -16,15 +16,7 @@ var mySwiper = new Swiper(".swiper", {
         el: '.swiper-pagination',
         clickable: true,
         bulletClass: 'swiper-pagination-bullet',
-        bulletActiveClass: 'swiper-pagination-bullet-active',
-        renderBullet: function (index, className) {
-
-            var dotsNum = window.innerWidth <= 767 ? 6 : 2;
-            if (index < dotsNum) {
-                return '<span class="' + className + '"></span>';
-            }
-            return '';
-        },
+        bulletActiveClass: 'swiper-pagination-bullet-active'
     },
     breakpoints: {
         768: {
@@ -54,6 +46,8 @@ $(document).ready(function() {
     const scrollButton = $('.scroll');
     const footer = $('footer');
 
+    scrollButton.hide();
+
     $(window).scroll(function() {
 
     if ($(this).scrollTop() > 200) {
@@ -71,7 +65,7 @@ $(document).ready(function() {
     } else {
         scrollButton.css({
             position: 'fixed',
-            bottom: '0rem',
+            bottom: '4rem',
         });
     }
     });
