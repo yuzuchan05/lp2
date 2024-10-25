@@ -14,17 +14,17 @@
     <meta property="og:site_name" content="Kira-meki">
     <meta property="og:locale" content="ja_JP">
 
-    <!-- Google Fonts -->
+    <!---- Google Fonts ---->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Marcellus&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
-    <!-- Bootstrap Icons -->
+    <!---- Bootstrap Icons ---->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <!-- リセットCSS -->
+    <!---- リセットCSS ---->
     <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
-    <!-- swiper -->
+    <!---- swiper ---->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <!-- Smart Tab -->
+    <!---- Smart Tab ---->
     <link href="https://cdn.jsdelivr.net/npm/jquery-smarttab@4/dist/css/smart_tab_all.min.css" rel="stylesheet">
     <link href="/assets/style/main.css" rel="stylesheet">
 </head>
@@ -32,80 +32,87 @@
 <body>
     <main>
 
-    <!------------- top ----------------->
+    <!------------ header ------------>
 
-        <section class="top">
-            <div class="top__container">
-                <img class="top__logo" src="/assets/image/header_logo.svg" alt="Kirameki">
-                <div class="top__title">
-                    <h1>Kirameki Cream</h1>
-                    <p>肌のうるおい、煌めく。</p>
+        <header class="header">
+            <div class="header__container">
+                <img class="header__logo" src="/assets/image/header_logo.svg" alt="Kira-meki">
+                <div class="header__title">
+                    <picture class="header__main">
+                        <source srcset="/assets/image/header_title.svg" media="(min-width: 768px)">
+                        <img class="header__main-logo-sp" src="/assets/image/header_title_sp.svg" alt="Kirameki cream">
+                    </picture>
+                    <h1 class="header__sub">肌のうるおい、煌めく。</h1>
                 </div>
             </div>
-        </section>
+        </header>
 
-    <!------------- btn ----------------->
+    <!------------ btn ------------>
         <div class="btn__contents">
             <div class="btn__item">
                 <div class="btn__title">
-                    <h1>キラメキクリーム</h1>
+                    <h4>キラメキクリーム</h4>
                     <p>税込  4,000円</p>
                 </div>
                 <ul class="btn__form">
                     <li><a href="#" class="btn btn__form01">オンラインショップへ</a></li>
-                    <li><a href="#" class="btn btn__form02">購入する</a></li>
+                    <li>
+                        <form action="/cart" method="POST">
+                            <input type="submit" value="購入する" class="btn btn__form02">
+                        </form>
+                    </li>
                 </ul>
             </div>
         </div>
 
-    <!------------- mask ----------------->
+    <!------------ mask ------------>
 
         <section class="mask">
             <div class="mask__container">
                 <div class="mask__item">
-                    <h1>Keep Your Skin Beautiful.</h1>
-                    <h2>お肌を美しく保つ</h2>
+                    <h2 class="mask__title">Keep Your Skin Beautiful.</h2>
+                    <h2 class="mask__sub">お肌を美しく保つ</h2>
                     <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                 </div>
             </div>
         </section>
 
-    <!------------- voice ----------------->
+    <!------------ voice ------------>
 
         <section class="voice">
-            <h1 class="voice__title">Voices</h1>
-            <h2 class="voice__title--jp">お客様の声</h2>
+            <h3 class="voice__title">Voices</h3>
+            <h3 class="voice__title--jp">お客様の声</h3>
             <div class="swiper__container">
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="swiper__img"><img src="assets/image/ppl_01.png" alt=""></div>
-                            <div class="swiper__ppl">Aさん</div>
+                            <div class="voice__img"><img src="/assets/image/ppl_01.png" alt="Aさん"></div>
+                            <div class="voice__people">Aさん</div>
                             <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                         </div>
                         <div class="swiper-slide">
-                          <div class="swiper__img"><img src="assets/image/ppl_02.png" alt=""></div>
-                          <div class="swiper__ppl">Bさん</div>
+                          <div class="voice__img"><img src="/assets/image/ppl_02.png" alt="Bさん"></div>
+                          <div class="voice__people">Bさん</div>
                           <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                         </div>
                         <div class="swiper-slide">
-                          <div class="swiper__img"><img src="assets/image/ppl_03.png" alt=""></div>
-                          <div class="swiper__ppl">Cさん</div>
+                          <div class="voice__img"><img src="/assets/image/ppl_03.png" alt="Cさん"></div>
+                          <div class="voice__people">Cさん</div>
                           <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                         </div>
                         <div class="swiper-slide">
-                          <div class="swiper__img"><img src="assets/image/ppl_04.png" alt=""></div>
-                          <div class="swiper__ppl">Dさん</div>
+                          <div class="voice__img"><img src="/assets/image/ppl_04.png" alt="Dさん"></div>
+                          <div class="voice__people">Dさん</div>
                           <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                         </div>
                         <div class="swiper-slide">
-                          <div class="swiper__img"><img src="assets/image/ppl_05.png" alt=""></div>
-                          <div class="swiper__ppl">Eさん</div>
+                          <div class="voice__img"><img src="/assets/image/ppl_05.png" alt="Eさん"></div>
+                          <div class="voice__people">Eさん</div>
                           <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                         </div>
                         <div class="swiper-slide">
-                          <div class="swiper__img"><img src="assets/image/ppl_06.png" alt=""></div>
-                          <div class="swiper__ppl">Fさん</div>
+                          <div class="voice__img"><img src="/assets/image/ppl_06.png" alt="Fさん"></div>
+                          <div class="voice__people">Fさん</div>
                           <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
                         </div>
                     </div>
@@ -116,11 +123,11 @@
             </div>
         </section>
 
-    <!------------- questions ----------------->
+    <!------------ questions ------------>
 
-    <section class="qu">
-        <h1 class="qu__title">Q&A</h1>
-        <h2 class="qu__title--jp">よくあるご質問</h2>
+    <section class="qa">
+        <h3 class="qa__title">Q&A</h3>
+        <h3 class="qa__title--jp">よくあるご質問</h3>
         <dl>
             <dt>テキストが入ります。テキストが入ります。テキストが入ります。</dt>
             <dd>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
@@ -143,16 +150,20 @@
         </dl>
     </section>
 
-    <!------------- btn ----------------->
+    <!------------ btn ------------>
     <div class="btn__contents">
         <div class="btn__item">
             <div class="btn__title">
-                <h1>キラメキクリーム</h1>
+                <h4>キラメキクリーム</h4>
                 <p>税込  4,000円</p>
             </div>
             <ul class="btn__form">
                 <li><a href="#" class="btn btn__form01">オンラインショップへ</a></li>
-                <li><a href="#" class="btn btn__form02">購入する</a></li>
+                <li>
+                    <form action="/cart" method="POST">
+                        <input type="submit" value="購入する" class="btn btn__form02">
+                    </form>
+                </li>
             </ul>
         </div>
     </div>
@@ -160,20 +171,20 @@
 
     </main>
 
-    <!------------- scroll ----------------->
+    <!------------ scroll ------------>
 
     <a href="#" class="scroll"></a>
 
-    <!------------- footer ----------------->
+    <!------------ footer ------------>
 
     <footer class="footer">
         <div class="footer__container">
-            <div class="footer__img"><img src="/assets/image/footer_logo.svg" alt="Kirameki"></div>
+            <div class="footer__img"><img src="/assets/image/footer_logo.svg" alt="Kira-meki"></div>
             <nav class="footer__item">
                 <ul>
-                    <li><a href="/company/">会社概要</a></li>
-                    <li><a href="/privacy-policy/">個人情報保護ポリシー</a></li>
-                    <li><a href="/contact/">お問い合わせ</a></li>
+                    <li><a href="/company">会社概要</a></li>
+                    <li><a href="/privacy-policy">個人情報保護ポリシー</a></li>
+                    <li><a href="/contact">お問い合わせ</a></li>
                 </ul>
             </nav>
             <div class="footer__bottom">
@@ -183,14 +194,16 @@
     </footer>
 
 
-    <!-- jQuery -->
+    <!---- jQuery ---->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <!-- swiper -->
+    <!---- swiper ---->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Smart Tab -->
+    <!---- Smart Tab ---->
     <script src="https://cdn.jsdelivr.net/npm/jquery-smarttab@4/dist/js/jquery.smartTab.min.js"></script>
     <script src="/assets/script/main.js"></script>
 
 </body>
 
 </html>
+
+

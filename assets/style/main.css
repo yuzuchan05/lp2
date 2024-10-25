@@ -1,22 +1,20 @@
-@charset "UTF-8";
 html {
-  scroll-behavior: smooth; /* スムーススクロールでリンクへ飛ぶ */
+  scroll-behavior: smooth;
   font-size: 2.5641025641vw;
 }
 
 @media (min-width: 768px) {
   html {
     font-size: 0.8333333333vw;
-    /* 1200はPCカンプのコンテンツ幅 */
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
   html {
     font-size: 62.5%;
   }
 }
 body {
-  font-family: "Noto Serif JP";
+  font-family: "Noto Serif JP", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   color: #000;
@@ -76,9 +74,9 @@ li {
   }
 }
 
-/* top
+/* header
 -----------------------------------------*/
-.top__container {
+.header {
   background-image: url("/assets/image/main_sp.jpg");
   background-size: 100% 45rem;
   background-position: top left;
@@ -87,90 +85,65 @@ li {
   min-height: 45rem;
 }
 @media screen and (min-width: 768px) {
-  .top__container {
+  .header {
     background-image: url("/assets/image/main_pc.jpg");
     height: auto;
     width: 100%;
     min-height: 72rem;
-    padding: 3.8rem 2rem 5.9rem;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1500px) {
-  .top__container {
+    padding: 0;
     background-size: cover;
     background-position: center;
   }
-}
-@media screen and (min-width: 768px) and (min-width: 1501px) {
-  .top__container {
-    background-size: cover;
-    background-position: center;
-    padding-top: 48%;
-    position: relative;
-    height: 0;
-  }
-}
-.top__logo {
-  width: 14.3rem;
 }
 @media screen and (min-width: 768px) {
-  .top__logo {
-    width: 16.6rem;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 1501px) {
-  .top__logo {
-    padding-top: 0px;
+  .header__container {
+    max-width: 105.5rem;
+    padding: 3.8rem 0 0;
     margin: 0 auto;
-    position: absolute;
-    top: 6%;
-    left: 46%;
   }
 }
-.top__title {
+.header__logo {
+  width: 36vw;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    width: 11vw;
+  }
+}
+.header__title {
   text-align: left;
   padding-top: 107%;
 }
 @media screen and (min-width: 768px) {
-  .top__title {
+  .header__title {
     padding-top: 21rem;
-    margin: 0 auto;
-    max-width: 105.5rem;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 1501px) {
-  .top__title {
-    padding-top: 0px;
-    margin: 0 auto;
-    max-width: 106rem;
-    position: absolute;
-    top: 36%;
-    left: 16%;
-  }
-}
-.top h1 {
-  font-size: 4.1rem;
-  font-family: Marcellus;
-  line-height: 1.23;
-  margin: 0 0 1.15rem 0;
-  max-width: 24.6rem;
-  letter-spacing: 1.23rem;
+.header__main {
+  margin: 0.8rem 0 2.3rem 0.2rem;
+  width: 62.5vw;
+  display: inline-block;
 }
 @media screen and (min-width: 768px) {
-  .top h1 {
-    font-size: 5rem;
-    line-height: 1.36;
-    margin: 0 0 1rem 0;
-    letter-spacing: 1.48rem;
+  .header__main {
+    margin: 1.5rem 0 2.3rem 0;
+    width: 20vw;
   }
 }
-.top p {
+.header__main-logo {
+  width: 100%;
+}
+.header__main-logo-sp {
+  width: 100%;
+}
+.header__sub {
   font-size: 2rem;
   line-height: 1.2;
   letter-spacing: 0.6rem;
+  font-weight: 400;
 }
 @media screen and (min-width: 768px) {
-  .top p {
+  .header__sub {
     font-size: 2.5rem;
     line-height: 1.44;
     letter-spacing: 0.76rem;
@@ -184,12 +157,18 @@ li {
   align-items: center;
   justify-content: center;
   width: 30rem;
-  padding: 1.8rem 6rem 1.9rem 6rem;
+  padding: 1.7rem 5rem 1.6rem 5rem;
   border-radius: 3.4rem;
   font-size: 1.8rem;
   font-weight: 600;
   color: #fff;
   margin: 0 auto;
+  border: 0.2rem solid transparent;
+}
+@media screen and (min-width: 768px) {
+  .btn {
+    padding: 1.8rem 5rem 1.7rem 5rem;
+  }
 }
 .btn__contents {
   margin: 0 1.6rem 5rem;
@@ -201,7 +180,7 @@ li {
     padding: 4.8rem 0;
   }
 }
-.btn__contents h1 {
+.btn__contents h4 {
   color: #111111;
   font-size: 1.8rem;
   line-height: 1.2222222222;
@@ -211,10 +190,10 @@ li {
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  .btn__contents h1 {
+  .btn__contents h4 {
     font-size: 2.4rem;
     line-height: 1.4583333333;
-    padding: 4rem 0 0 4.8rem;
+    padding: 3.7rem 0 0 4.8rem;
     letter-spacing: 0.25rem;
   }
 }
@@ -262,6 +241,7 @@ li {
 }
 @media screen and (min-width: 768px) {
   .btn__form {
+    width: 36rem;
     display: flex;
     padding: 0;
     gap: 3.2rem;
@@ -307,27 +287,13 @@ li {
 @media screen and (min-width: 768px) {
   .mask {
     background-image: url("/assets/image/mask_pc.jpg");
-    min-height: 55rem;
     padding: 0;
     height: auto;
     width: 100%;
     min-height: 55rem;
     overflow: hidden;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1500px) {
-  .mask {
     background-size: cover;
     background-position: center;
-  }
-}
-@media screen and (min-width: 768px) and (min-width: 1501px) {
-  .mask {
-    background-size: cover;
-    background-position: center;
-    padding-top: 36.6666666667%;
-    position: relative;
-    height: 0;
   }
 }
 .mask__container {
@@ -337,49 +303,40 @@ li {
   .mask__container {
     text-align: left;
     display: flex;
-    flex-direction: column;
-    margin-left: auto;
-    padding: 12.5rem 4rem 0 0;
+    justify-content: flex-end;
+    margin: 0 auto;
+    padding: 12.3rem 0 0 0;
+    max-width: 126rem;
   }
 }
 @media screen and (min-width: 768px) {
   .mask__item {
-    margin-left: 56.8%;
-    width: 46.7rem;
+    width: 55rem;
+    padding: 0 12rem 0 0;
   }
 }
-@media screen and (min-width: 768px) and (min-width: 1501px) {
-  .mask__item {
-    padding-top: 0px;
-    margin: 0 auto;
-    width: 42.7rem;
-    position: absolute;
-    top: 22%;
-    right: 13%;
-  }
-}
-.mask h1 {
-  font-family: "EB Garamond";
+.mask__title {
+  font-family: "EB Garamond", sans-serif;
   font-size: 3rem;
   font-weight: 700;
   text-align: center;
   padding: 0 0 1.2rem 0;
 }
 @media screen and (min-width: 768px) {
-  .mask h1 {
+  .mask__title {
     text-align: left;
     font-size: 3.8rem;
     line-height: 1.4210526316;
     padding: 0 0 1rem 0;
   }
 }
-.mask h2 {
+.mask__sub {
   font-size: 2.4rem;
   font-weight: 600;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  .mask h2 {
+  .mask__sub {
     text-align: left;
   }
 }
@@ -399,13 +356,13 @@ li {
 }
 @media screen and (min-width: 768px) {
   .voice {
-    padding: 7.7rem 1.6rem 7.5rem;
+    padding: 7.5rem 1.6rem 7.5rem;
     max-width: unset;
   }
 }
 .voice__title {
   font-size: 3rem;
-  font-family: "EB Garamond";
+  font-family: "EB Garamond", sans-serif;
   font-weight: 700;
   text-align: center;
   letter-spacing: 0.15rem;
@@ -444,6 +401,37 @@ li {
     margin-inline: auto;
   }
 }
+.voice__img {
+  width: 8.5rem;
+  height: 8rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .voice__img {
+    width: 10.5rem;
+    height: unset;
+  }
+}
+.voice img {
+  padding-left: 0.5rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .voice img {
+    padding-left: 0.5rem;
+  }
+}
+.voice__people {
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 1rem 0 1.6rem;
+  letter-spacing: 0.03rem;
+}
+@media screen and (min-width: 768px) {
+  .voice__people {
+    padding: 1.1rem 0 1.6rem;
+  }
+}
 .voice .swiper {
   padding: 0.8rem 3.9rem;
   margin: 0 auto;
@@ -464,37 +452,6 @@ li {
 @media screen and (min-width: 768px) {
   .voice .swiper-slide {
     padding: 4rem 1.7rem 3.8rem 1.5rem;
-  }
-}
-.voice .swiper__img {
-  width: 8.5rem;
-  height: 8rem;
-  margin: 0 auto;
-}
-@media screen and (min-width: 768px) {
-  .voice .swiper__img {
-    width: 10.5rem;
-    height: unset;
-  }
-}
-.voice .swiper img {
-  padding-left: 0.5rem;
-}
-@media screen and (min-width: 768px) {
-  .voice .swiper img {
-    width: 100%;
-    padding-left: 0.5rem;
-  }
-}
-.voice .swiper__ppl {
-  font-size: 1.4rem;
-  text-align: center;
-  padding: 1rem 0 1.6rem;
-  letter-spacing: 0.03rem;
-}
-@media screen and (min-width: 768px) {
-  .voice .swiper__ppl {
-    padding: 1.1rem 0 1.6rem;
   }
 }
 .voice .swiper p {
@@ -567,32 +524,32 @@ li {
 
 /* questions
 ---------------------------------------- */
-.qu {
+.qa {
   padding: 3.4rem 1.6rem 1.2rem;
   background: transparent linear-gradient(90deg, #F4FFE8 0%, #C6F0FE 100%);
   margin-bottom: 5.1rem;
 }
 @media screen and (min-width: 768px) {
-  .qu {
+  .qa {
     margin-bottom: 0;
     padding: 3.8rem 1.6rem 1.8rem;
   }
 }
-.qu__title {
+.qa__title {
   font-size: 3rem;
-  font-family: "EB Garamond";
+  font-family: "EB Garamond", sans-serif;
   font-weight: 700;
   text-align: center;
   letter-spacing: 0.15rem;
 }
 @media screen and (min-width: 768px) {
-  .qu__title {
+  .qa__title {
     font-size: 4.5rem;
     line-height: 1.40625;
     letter-spacing: 0.23rem;
   }
 }
-.qu__title--jp {
+.qa__title--jp {
   font-size: 1.6rem;
   font-weight: 600;
   padding: 0.8rem 0 3.9rem 0;
@@ -600,12 +557,12 @@ li {
   letter-spacing: 0.09rem;
 }
 @media screen and (min-width: 768px) {
-  .qu__title--jp {
+  .qa__title--jp {
     font-size: 2rem;
     padding: 0.8rem 0 4.3rem 0;
   }
 }
-.qu dl {
+.qa dl {
   background-color: #fff;
   color: #444444;
   font-size: 1.5rem;
@@ -613,62 +570,62 @@ li {
   margin-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
-  .qu dl {
+  .qa dl {
     max-width: 60rem;
     margin: 0 auto 2.4rem;
   }
 }
-.qu dt {
+.qa dt {
   padding: 1.6rem 4.3rem 1.2rem 4.5rem;
   position: relative;
   cursor: pointer;
   line-height: 1.6;
 }
 @media screen and (min-width: 768px) {
-  .qu dt {
+  .qa dt {
     padding: 2.2rem 4.3rem 1.2rem 5.8rem;
   }
 }
-.qu dl:nth-of-type(2) dt,
-.qu dl:nth-of-type(3) dt {
+.qa dl:nth-of-type(2) dt,
+.qa dl:nth-of-type(3) dt {
   padding: 1.7rem 4.3rem 1.8rem 4.5rem;
 }
 @media screen and (min-width: 768px) {
-  .qu dl:nth-of-type(2) dt,
-  .qu dl:nth-of-type(3) dt {
+  .qa dl:nth-of-type(2) dt,
+  .qa dl:nth-of-type(3) dt {
     padding: 2.3rem 4.3rem 1.8rem 5.9rem;
   }
 }
-.qu dl:nth-of-type(4) dt {
+.qa dl:nth-of-type(4) dt {
   padding: 1.6rem 4.3rem 1.8rem 4.5rem;
 }
 @media screen and (min-width: 768px) {
-  .qu dl:nth-of-type(4) dt {
+  .qa dl:nth-of-type(4) dt {
     padding: 2.2rem 4.3rem 1.8rem 5.8rem;
   }
 }
-.qu dl:nth-of-type(5) dt {
+.qa dl:nth-of-type(5) dt {
   padding: 1.6rem 4.3rem 1.8rem 4.5rem;
 }
 @media screen and (min-width: 768px) {
-  .qu dl:nth-of-type(5) dt {
+  .qa dl:nth-of-type(5) dt {
     padding: 2.2rem 4.3rem 1.8rem 5.8rem;
   }
 }
-.qu dt::before {
+.qa dt::before {
   content: "Q.";
   display: inline-block;
-  font-family: "EB Garamond";
+  font-family: "EB Garamond", sans-serif;
   font-size: 1.6rem;
   line-height: 1.9;
   text-indent: -2.9rem;
 }
 @media screen and (min-width: 768px) {
-  .qu dt::before {
+  .qa dt::before {
     text-indent: -3.3rem;
   }
 }
-.qu dt::after {
+.qa dt::after {
   content: "";
   display: inline-block;
   background-image: url(/assets/image/caret_down.svg);
@@ -680,14 +637,14 @@ li {
   top: 3.1rem;
 }
 @media screen and (min-width: 768px) {
-  .qu dt::after {
+  .qa dt::after {
     width: 1.2rem;
     height: 1.2rem;
     right: 2.5rem;
     top: 3.2rem;
   }
 }
-.qu dl.open dt::after {
+.qa dl.open dt::after {
   content: "";
   background-image: url(/assets/image/caret_up.svg);
   position: absolute;
@@ -698,25 +655,25 @@ li {
   top: 3.1rem;
 }
 @media screen and (min-width: 768px) {
-  .qu dl.open dt::after {
+  .qa dl.open dt::after {
     width: 1.2rem;
     height: 1.2rem;
     right: 2.5rem;
     top: 3.2rem;
   }
 }
-.qu dd {
+.qa dd {
   padding: 0rem 1.2rem 2.9rem 4.4rem;
   display: none;
   font-size: 1.5rem;
   line-height: 1.86;
 }
 @media screen and (min-width: 768px) {
-  .qu dd {
+  .qa dd {
     padding: 0.1rem 3.5rem 1.9rem 5.8rem;
   }
 }
-.qu dd::before {
+.qa dd::before {
   content: "A.";
   display: inline-block;
   font-size: 1.6rem;
@@ -725,7 +682,7 @@ li {
   padding-left: 0.1rem;
 }
 @media screen and (min-width: 768px) {
-  .qu dd::before {
+  .qa dd::before {
     text-indent: -3.5rem;
   }
 }
@@ -741,6 +698,7 @@ li {
   background-size: cover;
   width: 4rem;
   height: 4rem;
+  z-index: 100;
 }
 @media screen and (min-width: 768px) {
   .scroll {
@@ -770,7 +728,9 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin: 0 16.5rem 0 16.3rem;
+    margin: 0 auto;
+    max-width: 126rem;
+    padding: 0 4%;
   }
 }
 .footer__img {
@@ -788,7 +748,8 @@ li {
 }
 @media screen and (min-width: 768px) {
   .footer img {
-    width: 19rem;
+    width: 18.6rem;
+    padding: 0.1rem 0 0 0;
   }
 }
 .footer__item {
@@ -800,7 +761,7 @@ li {
 @media screen and (min-width: 768px) {
   .footer__item {
     font-size: 1.4rem;
-    margin-left: 5rem;
+    margin: 0 0.8rem 0 5.7rem;
   }
 }
 .footer ul {
@@ -819,13 +780,13 @@ li {
 .footer a {
   color: #fff;
 }
-.footer .footer__bottom {
+.footer__bottom {
   text-align: center;
   padding: 2.1rem 0 0 0;
 }
 @media screen and (min-width: 768px) {
-  .footer .footer__bottom {
-    padding: 0;
+  .footer__bottom {
+    padding: 0 0.3rem 0 0;
   }
 }
 .footer .copyright {

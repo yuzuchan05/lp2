@@ -1,16 +1,10 @@
 @charset "UTF-8";
 
 $sp:767px;
-$md:1200px;
 $pc:768px;
 
 @mixin sp {
     @media screen and (max-width: ($sp)) {
-        @content;
-    }
-}
-@mixin md {
-    @media screen and (max-width: $md) and (min-width: $pc){
         @content;
     }
 }
@@ -21,16 +15,15 @@ $pc:768px;
 }
 
 html {
-    scroll-behavior: smooth;  /* スムーススクロールでリンクへ飛ぶ */
+    scroll-behavior: smooth;
     font-size: calc(10 * 100vw / 390);
 }
 @media (min-width:768px) {
     html {
         font-size: calc(10 * 100vw / 1200);
-        /* 1200はPCカンプのコンテンツ幅 */
     }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1250px) {
     html {
         font-size: 62.5%;
     }
@@ -38,7 +31,7 @@ html {
 
 
 body {
-    font-family: "Noto Serif JP";
+    font-family: "Noto Serif JP", sans-serif;
     font-size: 1.6rem;
     font-weight: 400;
     color: #000;
@@ -94,51 +87,39 @@ li {
     }
 }
 
-/* top
+/* header
 -----------------------------------------*/
-.top {
+.header {
+    background-image: url("/assets/image/main_sp.jpg");
+    background-size: 100% 45rem;
+    background-position: top left;
+    padding: 2.9rem 2.2rem 5.2rem;
+    text-align: center;
+    min-height: 45rem;
+
+    @include pc {
+        background-image: url("/assets/image/main_pc.jpg");
+        height: auto;
+        width: 100%;
+        min-height: 72rem;
+        padding: 0;
+        background-size: cover;
+        background-position: center;
+    }
     &__container {
-        background-image: url("/assets/image/main_sp.jpg");
-        background-size: 100% 45rem;
-        background-position: top left;
-        padding: 2.9rem 2.2rem 5.2rem;
-        text-align: center;
-        min-height: 45rem;
 
         @include pc {
-            background-image: url("/assets/image/main_pc.jpg");
-            height: auto;
-            width: 100%;
-            min-height: 72rem;
-            padding: 3.8rem 2rem 5.9rem;
-
-            @media (max-width:1500px) {
-                background-size: cover;
-                background-position: center;
-            }
-            @media (min-width:1501px) {
-                background-size: cover;
-                background-position: center;
-                padding-top: calc(720 / 1500* 100%);
-                position: relative;
-                height: 0;
-            }
+            max-width: 105.5rem;
+            padding: 3.8rem 0 0;
+            margin: 0 auto;
         }
     }
 
     &__logo {
-        width: 14.3rem;
+        width: 36vw;
 
         @include pc {
-            width: 16.6rem;
-
-            @media (min-width:1501px) {
-                padding-top: 0px;
-                margin: 0 auto;
-                position: absolute;
-                top: 6%;
-                left: 46%;
-            }
+            width: 11vw;
         }
     }
     &__title {
@@ -147,38 +128,29 @@ li {
 
         @include pc {
             padding-top: 21rem;
-            margin: 0 auto;
-            max-width: 105.5rem;
-
-            @media (min-width:1501px) {
-                padding-top: 0px;
-                margin: 0 auto;
-                max-width: 106rem;
-                position: absolute;
-                top: 36%;
-                left: 16%;
-            }
         }
     }
-    h1 {
-        font-size: 4.1rem;
-        font-family: Marcellus;
-        line-height: 1.23;
-        margin: 0 0 1.15rem 0;
-        max-width: 24.6rem;
-        letter-spacing: 1.23rem;
+    &__main {
+        margin: 0.8rem 0 2.3rem 0.2rem;
+        width: 62.5vw;
+        display: inline-block;
 
         @include pc {
-            font-size: 5rem;
-            line-height: calc(68 / 50);
-            margin: 0 0 1rem 0;
-            letter-spacing: 1.48rem;
+            margin: 1.5rem 0 2.3rem 0;
+            width: 20vw;
+        }
+        &-logo {
+            width: 100%;
+        }
+        &-logo-sp {
+            width: 100%;
         }
     }
-    p {
+    &__sub {
         font-size: 2rem;
         line-height: calc(24 / 20);
         letter-spacing: 0.6rem;
+        font-weight: 400;
 
         @include pc {
             font-size: 2.5rem;
@@ -195,12 +167,17 @@ li {
     align-items: center;
     justify-content: center;
     width: 30rem;
-    padding: 1.8rem 6rem 1.9rem 6rem;
+    padding: 1.7rem 5rem 1.6rem 5rem;
     border-radius: 3.4rem;
     font-size: 1.8rem;
     font-weight: 600;
     color: #fff;
     margin: 0 auto;
+    border: 0.2rem solid transparent;
+
+    @include pc {
+        padding: 1.8rem 5rem 1.7rem 5rem;
+    }
 
     &__contents {
         margin: 0 1.6rem 5rem;
@@ -211,7 +188,7 @@ li {
             padding: 4.8rem 0;
         }
 
-        h1 {
+        h4 {
             color: #111111;
             font-size: 1.8rem;
             line-height: calc(22 / 18);
@@ -223,7 +200,7 @@ li {
             @include pc {
                 font-size: 2.4rem;
                 line-height: calc(35 / 24);
-                padding: 4rem 0 0 4.8rem;
+                padding: 3.7rem 0 0 4.8rem;
                 letter-spacing: 0.25rem;
             }
         }
@@ -269,6 +246,7 @@ li {
         padding: 0 0 3.4rem;
 
         @include pc {
+            width: 36rem;
             display: flex;
             padding: 0;
             gap: 3.2rem;
@@ -314,24 +292,13 @@ li {
 
     @include pc {
         background-image: url("/assets/image/mask_pc.jpg");
-        min-height: 55rem;
         padding: 0;
         height: auto;
         width: 100%;
         min-height: 55rem;
         overflow: hidden;
-
-        @media (max-width:1500px) {
-            background-size: cover;
-            background-position: center;
-        }
-        @media (min-width:1501px) {
-            background-size: cover;
-            background-position: center;
-            padding-top: calc(550 / 1500* 100%);
-            position: relative;
-            height: 0;
-        }
+        background-size: cover;
+        background-position: center;
     }
     &__container {
         color: #fff;
@@ -339,28 +306,20 @@ li {
         @include pc {
             text-align: left;
             display: flex;
-            flex-direction: column;
-            margin-left: auto;
-            padding: 12.5rem 4rem 0 0;
+            justify-content: flex-end;
+            margin: 0 auto;
+            padding: 12.3rem 0 0 0;
+            max-width: 126rem;
         }
     }
     &__item {
         @include pc {
-            margin-left: 56.8%;
-            width: 46.7rem;
-
-            @media (min-width:1501px) {
-                padding-top: 0px;
-                margin: 0 auto;
-                width: 42.7rem;
-                position: absolute;
-                top: 22%;
-                right: 13%;
-            }
+            width: 55rem;
+            padding: 0 12rem 0 0;
         }
     }
-    h1 {
-        font-family: "EB Garamond";
+    &__title {
+        font-family: "EB Garamond", sans-serif;
         font-size: 3rem;
         font-weight: 700;
         text-align: center;
@@ -373,7 +332,7 @@ li {
             padding: 0 0 1rem 0;
         }
     }
-    h2 {
+    &__sub {
         font-size: 2.4rem;
         font-weight: 600;
         text-align: center;
@@ -398,13 +357,13 @@ li {
     max-width: 102.4rem;
 
     @include pc {
-        padding: 7.7rem 1.6rem 7.5rem;
+        padding: 7.5rem 1.6rem 7.5rem;
         max-width: unset;
     }
 
     &__title {
         font-size: 3rem;
-        font-family: "EB Garamond";
+        font-family: "EB Garamond", sans-serif;
         font-weight: 700;
         text-align: center;
         letter-spacing: 0.15rem;
@@ -440,6 +399,34 @@ li {
             margin-inline: auto;
         }
     }
+    &__img {
+        width: 8.5rem;
+        height: 8rem;
+        margin: 0 auto;
+
+        @include pc {
+            width: 10.5rem;
+            height: unset;
+        }
+    }
+    img {
+        padding-left: 0.5rem;
+        width: 100%;
+
+        @include pc {
+            padding-left: 0.5rem;
+        }
+    }
+    &__people {
+        font-size: 1.4rem;
+        text-align: center;
+        padding: 1rem 0 1.6rem;
+        letter-spacing: 0.03rem;
+
+        @include pc {
+            padding: 1.1rem 0 1.6rem;
+        }
+    }
     .swiper {
         padding: 0.8rem 3.9rem;
         margin: 0 auto;
@@ -458,34 +445,6 @@ li {
 
             @include pc {
                 padding: 4rem 1.7rem 3.8rem 1.5rem;
-            }
-        }
-        &__img {
-            width: 8.5rem;
-            height: 8rem;
-            margin: 0 auto;
-
-            @include pc {
-                width: 10.5rem;
-                height: unset;
-            }
-        }
-        img {
-            padding-left: 0.5rem;
-
-            @include pc {
-                width: 100%;
-                padding-left: 0.5rem;
-            }
-        }
-        &__ppl {
-            font-size: 1.4rem;
-            text-align: center;
-            padding: 1rem 0 1.6rem;
-            letter-spacing: 0.03rem;
-
-            @include pc {
-                padding: 1.1rem 0 1.6rem;
             }
         }
         p {
@@ -557,7 +516,7 @@ li {
 
 /* questions
 ---------------------------------------- */
-.qu {
+.qa {
     padding: 3.4rem 1.6rem 1.2rem;
     background: transparent linear-gradient(90deg, #F4FFE8 0%, #C6F0FE 100%);
     margin-bottom: 5.1rem;
@@ -569,7 +528,7 @@ li {
 
     &__title {
         font-size: 3rem;
-        font-family: "EB Garamond";
+        font-family: "EB Garamond", sans-serif;
         font-weight: 700;
         text-align: center;
         letter-spacing: 0.15rem;
@@ -639,7 +598,7 @@ li {
     dt::before {
         content: "Q." ;
         display: inline-block;
-        font-family: "EB Garamond";
+        font-family: "EB Garamond", sans-serif;
         font-size: 1.6rem;
         line-height: 1.9;
         text-indent: -2.9rem;
@@ -718,6 +677,7 @@ li {
     background-size: cover;
     width: 4rem;
     height: 4rem;
+    z-index: 100;
 
     @include pc {
         right: 10%;
@@ -746,7 +706,9 @@ li {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin: 0 16.5rem 0 16.3rem;
+            margin: 0 auto;
+            max-width: 126rem;
+            padding: 0 4%;
         }
     }
     &__img {
@@ -763,7 +725,8 @@ li {
     }
     img {
         @include pc {
-            width: 19rem;
+            width: 18.6rem;
+            padding: 0.1rem 0 0 0;
         }
     }
     &__item {
@@ -774,7 +737,7 @@ li {
 
         @include pc {
             font-size: 1.4rem;
-            margin-left: 5rem;
+            margin: 0 0.8rem 0 5.7rem;
         }
     }
     ul {
@@ -793,12 +756,12 @@ li {
     a {
         color: #fff;
     }
-    .footer__bottom {
+    &__bottom {
         text-align: center;
         padding: 2.1rem 0 0 0;
 
         @include pc {
-            padding: 0;
+            padding: 0 0.3rem 0 0;
         }
     }
     .copyright {
