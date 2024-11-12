@@ -1,7 +1,7 @@
 /* 手動slider
 -----------------------------------------*/
 var mySwiper = new Swiper(".swiper", {
-    loop: true,
+    loop: false,
     speed: 1000,
     slidesPerView: 1,
     slidesPerGroup: 1,
